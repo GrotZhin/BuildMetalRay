@@ -168,8 +168,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 570522281}
   - {fileID: 130066097}
+  - {fileID: 570522281}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130066096
@@ -1501,12 +1501,20 @@ PrefabInstance:
       value: 0.1639164
       objectReference: {fileID: 0}
     - target: {fileID: 4236910244793657219, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4236910244793657219, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 130066098}
+    - target: {fileID: 4236910244793657219, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSfxVolume
+      value: set_volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236910244793657219, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5003917341542486558, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
       propertyPath: m_Pivot.x
@@ -1591,7 +1599,7 @@ PrefabInstance:
     - target: {fileID: 5342846405852260291, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 42882626}
     - target: {fileID: 5342846405852260291, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetGeralVolume
@@ -1625,12 +1633,20 @@ PrefabInstance:
       value: 0.1639164
       objectReference: {fileID: 0}
     - target: {fileID: 7937334934800766368, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7937334934800766368, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 570522282}
+    - target: {fileID: 7937334934800766368, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetMusicVolume
+      value: set_volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937334934800766368, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8267949905814805121, guid: d2741aa813e13e64684b6654a9463d30, type: 3}
       propertyPath: m_Name

@@ -175,4 +175,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spd: 1
-  cameraFollow: {fileID: 0}

@@ -2213,7 +2213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5003917341542486558}
-  - component: {fileID: 620049288546808298}
+  - component: {fileID: 1983545853911996042}
   m_Layer: 5
   m_Name: optionsMenu
   m_TagString: Untagged
@@ -2245,7 +2245,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1000, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &620049288546808298
+--- !u!95 &1983545853911996042
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -2255,7 +2255,7 @@ Animator:
   m_GameObject: {fileID: 8267949905814805121}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5a6111ebd27a7024bb72da6505debaaf, type: 2}
+  m_Controller: {fileID: 9100000, guid: c64ef8323f006814ba4b920e08d52ae2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 2
   m_ApplyRootMotion: 0

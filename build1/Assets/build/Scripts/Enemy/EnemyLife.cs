@@ -28,9 +28,6 @@ namespace MetalRay
             score = GetComponent<Score>();
         }
 
-
-
-
         public void TakeDamage(int damage)
         {
 
@@ -38,7 +35,28 @@ namespace MetalRay
             if (life <= 0)
             {
                 Die();
+                Score.killCounterValue += 1;
+            if (Score.killCounterValue <= 10)
+            {
                 Score.scoreValue += 10;
+            }    
+            else if (Score.killCounterValue > 10 && Score.killCounterValue < 20)
+            {
+                Score.scoreValue += 20;
+            }
+            else if (Score.killCounterValue > 20 && Score.killCounterValue < 30) 
+            {
+                Score.scoreValue += 30;
+            }
+            else if (Score.killCounterValue > 30 && Score.killCounterValue < 40) 
+            {
+                Score.scoreValue += 4;
+            }
+            else if (Score.killCounterValue > 40 && Score.killCounterValue < 50) 
+            {
+                Score.scoreValue += 5;
+            }    
+
                 dropRate.DropPowerUp();
             }
 

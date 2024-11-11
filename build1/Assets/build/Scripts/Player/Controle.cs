@@ -23,7 +23,7 @@ namespace MetalRay
 
     Vector3 velocidadeAtual;
     Vector3 targetPosition;
-
+    
 
     void Start()
     {

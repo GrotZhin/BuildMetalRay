@@ -17,6 +17,7 @@ namespace MetalRay
         public int damage = 20;
         public UnityEngine.UI.Image fillBar;
         public UnityEngine.UI.Image halfBar;
+        public VideoClip[] sakiCam;
         public GameObject lifeBar;
         public GameObject hitSprite;
 
@@ -31,6 +32,7 @@ namespace MetalRay
         public void TakeDamage(int damage)
         {
             life -= damage;
+            
 
             if (life <= 0)
             {
@@ -64,7 +66,9 @@ namespace MetalRay
             if (fillBar.fillAmount <= 0.5)
             {
                 lifeBar.SetActive(false);
-            }else if(fillBar.fillAmount >= 0.5){
+            }   
+            else if(fillBar.fillAmount >= 0.5)
+            {
                 lifeBar.SetActive(true);
             }
             LifeBar();

@@ -20,7 +20,7 @@ namespace MetalRay
 
         DropRate dropRate;
         Score score;
-       
+
 
         void Start()
         {
@@ -36,26 +36,30 @@ namespace MetalRay
             {
                 Die();
                 Score.killCounterValue += 1;
-            if (Score.killCounterValue <= 10)
-            {
-                Score.scoreValue += 10;
-            }    
-            else if (Score.killCounterValue > 10 && Score.killCounterValue < 20)
-            {
-                Score.scoreValue += 20;
-            }
-            else if (Score.killCounterValue > 20 && Score.killCounterValue < 30) 
-            {
-                Score.scoreValue += 30;
-            }
-            else if (Score.killCounterValue > 30 && Score.killCounterValue < 40) 
-            {
-                Score.scoreValue += 4;
-            }
-            else if (Score.killCounterValue > 40 && Score.killCounterValue < 50) 
-            {
-                Score.scoreValue += 5;
-            }    
+                if (Score.killCounterValue <= 10)
+                {
+                    Score.scoreValue += 10;
+                }
+                else if (Score.killCounterValue > 10 && Score.killCounterValue < 20)
+                {
+                    Score.scoreValue += 20;
+                }
+                else if (Score.killCounterValue > 20 && Score.killCounterValue < 30)
+                {
+                    Score.scoreValue += 30;
+                }
+                else if (Score.killCounterValue > 30 && Score.killCounterValue < 40)
+                {
+                    Score.scoreValue += 40;
+                }
+                else if (Score.killCounterValue > 40 && Score.killCounterValue < 50)
+                {
+                    Score.scoreValue += 50;
+                }
+                else if (Score.killCounterValue > 50)
+                {
+                    Score.scoreValue += 50;
+                }
 
                 dropRate.DropPowerUp();
             }
@@ -64,7 +68,8 @@ namespace MetalRay
         }
         void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("enemyDestroy")){
+            if (other.gameObject.CompareTag("enemyDestroy"))
+            {
                 Delete();
             }
 

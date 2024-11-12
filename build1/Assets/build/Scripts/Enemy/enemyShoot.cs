@@ -26,6 +26,7 @@ namespace MetalRay
            PlayerLife playerLife = hitInfo.GetComponent<PlayerLife>();
             if(playerLife != null){
                 playerLife.TakeDamage(damage);
+                
 
               }
 

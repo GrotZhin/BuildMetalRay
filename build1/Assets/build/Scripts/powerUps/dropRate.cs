@@ -17,7 +17,7 @@ namespace MetalRay
             if (dropRate <= 20 && dropRate > 10)
             { 
                 Instantiate(item, transform.position, Quaternion.identity);
-            }else if (dropRate <= 10)
+            }else if (dropRate <= 10 && dropRate > 0)
            
             {
                 Instantiate(item, transform.position, Quaternion.identity);

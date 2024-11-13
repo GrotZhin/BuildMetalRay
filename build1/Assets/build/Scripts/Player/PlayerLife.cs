@@ -31,6 +31,7 @@ namespace MetalRay
         public void TakeDamage(int damage)
         {
             life -= damage;
+            soundManager.PlaySound(SoundType.PLAYERHIT);
             
             if (life <= 0)
             {
@@ -57,6 +58,12 @@ namespace MetalRay
                 enemyLife.Die();
                 TakeDamage(damage);
 
+            }
+             SubBossLife subBossLife = hitInfo.collider.GetComponent<SubBossLife>();
+            if (subBossLife != null)
+            {
+                
+                TakeDamage(damage);
             }
            
         }

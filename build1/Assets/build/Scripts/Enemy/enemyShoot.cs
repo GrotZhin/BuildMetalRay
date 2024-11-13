@@ -18,6 +18,7 @@ namespace MetalRay
       
         void Start(){
             rb.velocity = (-1* transform.up) * speed;
+            soundManager.PlaySound(SoundType.OTOMATOME);
             Destroy(this.gameObject, timeDestroy);
         }
        

@@ -43,12 +43,14 @@ namespace MetalRay
         public void Shoot()
         {
             GameObject shoot = shootPrefab[i];
+            
             Instantiate(shoot, firePoint.position, transform.rotation);
             Instantiate(muzzleVFX, transform);
         }
 
         public void DistorcionPowerUp()
         {
+            soundManager.PlaySound(SoundType.DISTORCION);
             i = 1;
         }
     }

@@ -13,19 +13,16 @@ namespace MetalRay
 
         public GameObject deathEffect;
 
-        public TextMeshProUGUI scoreText;
-
         public ParticleSystem vfxhit;
-        public int damage = 10;
 
         DropRate dropRate;
-        Score score;
+
 
 
         void Start()
         {
             dropRate = GetComponent<DropRate>();
-            score = GetComponent<Score>();
+            
         }
 
         public void TakeDamage(int damage)
@@ -82,6 +79,7 @@ namespace MetalRay
         }
         public void Die()
         {
+            soundManager.PlaySound(SoundType.ENEMYBOOM);
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(vfxhit, transform.position, Quaternion.identity);
             Destroy(gameObject);

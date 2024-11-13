@@ -43,10 +43,16 @@ namespace MetalRay
         {
             
             EnemyLife enemyLife = hitInfo.GetComponent<EnemyLife>();
+            SubBossLife subBossLife = hitInfo.GetComponent<SubBossLife>();
             if (enemyLife != null)
             {
                 enemyLife.TakeDamage(damage);
                 
+            }
+            else if (subBossLife != null)
+            {
+                
+                subBossLife.TakeDamage(damage);
             }
 
             Instantiate(impactEfect, transform.position, transform.rotation);

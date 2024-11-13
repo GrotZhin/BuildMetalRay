@@ -12,8 +12,11 @@ namespace MetalRay
     public enum SoundType
 
     {
-        menuSong,
-        
+        OTOMATOME,
+        DISCO,
+        ENEMYBOOM,
+        PLAYERHIT,
+        DISTORCION,
 
 
     }
@@ -43,10 +46,10 @@ namespace MetalRay
         {
             AudioClip[] clips = instance.soundList[(int)sound].Sounds;
             
-            //AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
-            instance.musicSource.clip = clips[0];
-            instance.musicSource.Play();
-            Debug.Log(clips.Length);
+            AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
+            instance.musicSource.PlayOneShot(randomClip, volume);
+          
+            
            
             
 

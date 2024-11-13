@@ -1,50 +1,83 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class subBossMove : MonoBehaviour
 {
     public float spd = 1;
     public bool move;
-    int i = 0;
+    
+    public GameObject reference;
 
-    private void FixedUpdate()
+    float min = -2;
+    float max = 2;
+    
+
+    float timer = 0f;
+    float interval = 20.0f;
+    int porcent;
+
+    public bool down;
+    private void Start(){
+        down = true;
+    }
+    private void Update()
     {
         Vector2 pos = transform.position;
+        timer += Time.deltaTime;
+        
 
-        if (move == true && i < 5 )
+        if (move == true && down == false)
         {
-            pos.x -= spd * Time.fixedDeltaTime;
-            if (pos.x <= -2)
+            pos.x -= spd * Time.deltaTime;
+            if (pos.x <= min)
             {
                 move = false;
-                i+=1;
+               
             }
 
         }
-        else if (move == false && i < 5 )
+        else if (move == false && down == false)
         {
-            pos.x += spd * Time.fixedDeltaTime;
-        
-            if (pos.x >= 2)
+            pos.x += spd * Time.deltaTime;
+            if (pos.x >= max)
             {
                 move = true;
-                i+=1;
             }
         }
-        else if(i >= 5)
+
+        if (timer >= interval)
         {
-        
-        pos.y -= 20 * Time.fixedDeltaTime;
-        //transform.position = new Vector3());
-        i = 0;
+            porcent = Random.Range(0, 100);
+            Debug.Log(porcent);
+            timer = 0;
         }
 
-        transform.position = pos;
-        
-    }
+        else if (porcent <= 100 && porcent > 0)
+        {
+            down = true;
+            porcent = 0;
+        }
 
+         if (down == true)
+        {
+            pos.y -= 5 * Time.deltaTime;
+             if (pos.y <= 0 ) 
+            {
+                pos.y = reference.transform.position.y;
+                pos.x = reference.transform.position.x;
+                
+            }
+             if(pos.y <= 5.20f && pos.y >= 5.18f)
+            {
+                down = false;}
+        
+        }
+        transform.position = pos;
+    }
 }

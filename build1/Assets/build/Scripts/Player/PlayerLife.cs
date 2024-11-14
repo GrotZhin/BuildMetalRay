@@ -18,27 +18,33 @@ namespace MetalRay
         public UnityEngine.UI.Image fillBar;
         public UnityEngine.UI.Image halfBar;
         public GameObject lifeBar;
+        public GameObject model;
         public GameObject hitSprite;
 
         public GameObject deathEffect;
 
         public TextMeshProUGUI textoVida;
-        
-        void Start(){
+
+        float killtimer = 0f;
+        bool die;
+
+
+        void Start()
+        {
             life = maxLife;
+            die = false;
         }
 
         public void TakeDamage(int damage)
         {
             life -= damage;
             soundManager.PlaySound(SoundType.PLAYERHIT);
-            
+
             if (life <= 0)
             {
                 Die();
-                SceneManager.LoadScene("lose");
-                
             }
+
         }
 
         public void RestaureLife(int restaure)
@@ -50,7 +56,7 @@ namespace MetalRay
             }
         }
 
-         void OnCollisionEnter(Collision hitInfo)
+        void OnCollisionEnter(Collision hitInfo)
         {
             EnemyLife enemyLife = hitInfo.collider.GetComponent<EnemyLife>();
             if (enemyLife != null)
@@ -59,38 +65,55 @@ namespace MetalRay
                 TakeDamage(damage);
 
             }
-             SubBossLife subBossLife = hitInfo.collider.GetComponent<SubBossLife>();
+            SubBossLife subBossLife = hitInfo.collider.GetComponent<SubBossLife>();
             if (subBossLife != null)
             {
-                
+
                 TakeDamage(damage);
             }
-           
+
         }
         void Update()
         {
+
+            if (die == true)
+            {
+                killtimer += Time.deltaTime;
+                Debug.Log(killtimer);
+            }
+            if (killtimer >= 2)
+            {
+                SceneManager.LoadScene("lose");
+                killtimer = 0f;
+            }
+            
+
             if (fillBar.fillAmount <= 0.5)
             {
                 lifeBar.SetActive(false);
-            }   
-            else if(fillBar.fillAmount >= 0.5)
+            }
+            else if (fillBar.fillAmount >= 0.5)
             {
                 lifeBar.SetActive(true);
             }
+
             LifeBar();
 
         }
 
-        public void LifeBar(){
-            fillBar.fillAmount = life/maxLife;
-            halfBar.fillAmount = life/maxLife;
+        public void LifeBar()
+        {
+            fillBar.fillAmount = life / maxLife;
+            halfBar.fillAmount = life / maxLife;
 
         }
 
         void Die()
         {
+            die = true;
+            halfBar.fillAmount = 0;
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Destroy(model.gameObject);
         }
     }
 }

@@ -3967,6 +3967,10 @@ PrefabInstance:
       value: 2.052
       objectReference: {fileID: 0}
     - target: {fileID: 5274131506487436153, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
+      propertyPath: model
+      value: 
+      objectReference: {fileID: 983709668}
+    - target: {fileID: 5274131506487436153, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
       propertyPath: fillBar
       value: 
       objectReference: {fileID: 1095840906}
@@ -3979,6 +3983,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1888281932}
     - target: {fileID: 5274131506487436153, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
+      propertyPath: killtimer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274131506487436153, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -3986,6 +3994,10 @@ PrefabInstance:
       propertyPath: textoVida
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5274131506487436153, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 7167642141063577736, guid: 532a141c2c5871840846cc3928b30ee7, type: 3}
     - target: {fileID: 5274131506487436153, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
       propertyPath: sakiCam.Array.size
       value: 2

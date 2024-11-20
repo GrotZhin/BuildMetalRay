@@ -33,12 +33,14 @@ namespace MetalRay
             {
                 Die();
                 Score.killCounterValue += 1;
+                Score.counter += 1;
                 if (Score.killCounterValue <= 10)
-                {
+                {   
+                    
                     Score.scoreValue += 10;
                 }
                 else if (Score.killCounterValue > 10 && Score.killCounterValue < 20)
-                {
+                {   
                     Score.scoreValue += 20;
                 }
                 else if (Score.killCounterValue > 20 && Score.killCounterValue < 30)

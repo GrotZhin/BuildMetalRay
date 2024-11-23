@@ -16,7 +16,7 @@ namespace MetalRay
         public Image[] phrases;
         public GameObject[] multiplier;
         public Transform reference;
-    
+        public Image save;
 
         void Start()
         {
@@ -29,12 +29,12 @@ namespace MetalRay
             score.text = "" + scoreValue;
             killCounter.text = "" + killCounterValue;
 
-           // if (counter == 10)
-            //{
-//
-            //    Phrases();
-           //     counter = 0;
-           // }
+           if (counter == 10)
+            {
+
+               Phrases();
+               counter = 0;
+           }
 
             if (killCounterValue >= 10 && killCounterValue < 20)
             {
@@ -59,9 +59,14 @@ namespace MetalRay
         {
 
             var randomPhrase = phrases[Random.Range(0, phrases.Length)];
-
-            Instantiate(randomPhrase, reference.transform);
-
+          
+           
+            if(save != null)
+            {
+                Destroy(save);
+                
+            }
+             save = Instantiate(randomPhrase, reference.transform);
         }
     }
 }

@@ -380,6 +380,7 @@
 "Assets/build/Scripts/InGame/gameCheat.cs"
 "Assets/build/Scripts/InGame/Retry.cs"
 "Assets/build/Scripts/InGame/Score.cs"
+"Assets/build/Scripts/InGame/UISpriteAnimation.cs"
 "Assets/build/Scripts/Menu/introTransition.cs"
 "Assets/build/Scripts/Menu/menuManager.cs"
 "Assets/build/Scripts/Player/Controle.cs"

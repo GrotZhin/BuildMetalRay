@@ -111,6 +111,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2894980678674382812, guid: cf88f5eddc36c4048b98d700cf0a62e1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc863b262da9af046a75a2f4f69be2c7, type: 2}
+    - target: {fileID: 8096275806234431486, guid: cf88f5eddc36c4048b98d700cf0a62e1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096275806234431486, guid: cf88f5eddc36c4048b98d700cf0a62e1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0000000745058
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096275806234431486, guid: cf88f5eddc36c4048b98d700cf0a62e1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096275806234431486, guid: cf88f5eddc36c4048b98d700cf0a62e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

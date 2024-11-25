@@ -80,6 +80,7 @@ MonoBehaviour:
   smoothness: 0.1
   leanAngle: 15
   leanSpeed: 5
+  collider: {fileID: 0}
   model: {fileID: 0}
   cameraFollow: {fileID: 0}
   minX: -2
@@ -99,7 +100,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 4939173582349200461}
-  shootPrefab: {fileID: 1066101916143653443, guid: 8d19fec6212b518439204ea8fc7d118e, type: 3}
+  shootPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  damage: 0
+  powerUpTimer: 10
+  distorcionTimer: 0
   muzzleVFX: {fileID: 5732456669828075857, guid: 1a9dd32a970864847a4958f2bfd1a811, type: 3}
 --- !u!54 &4097495128311952916
 Rigidbody:
@@ -141,7 +148,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 100
+  damage: 20
+  fillBar: {fileID: 0}
+  halfBar: {fileID: 0}
+  lifeBar: {fileID: 0}
+  model: {fileID: 0}
   hitSprite: {fileID: 0}
+  collider: {fileID: 0}
   deathEffect: {fileID: 6388375826042388363, guid: ece06eedd6aad074e872c242ca92aa11, type: 3}
   textoVida: {fileID: 0}
 --- !u!1 &8452428461058296999
@@ -209,23 +222,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f1eae3d7dfde949b515e38a6756775, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071071
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f1eae3d7dfde949b515e38a6756775, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7071065
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f1eae3d7dfde949b515e38a6756775, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f1eae3d7dfde949b515e38a6756775, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f1eae3d7dfde949b515e38a6756775, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f1eae3d7dfde949b515e38a6756775, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y

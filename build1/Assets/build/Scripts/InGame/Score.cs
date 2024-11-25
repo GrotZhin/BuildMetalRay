@@ -11,16 +11,19 @@ namespace MetalRay
         public static int scoreValue = 0;
         public static int killCounterValue = 0;
         public static int counter = 0;
+        public static float killTimer = 0;
         public TextMeshProUGUI score;
         public TextMeshProUGUI killCounter;
         public Image[] phrases;
         public GameObject[] multiplier;
         public Transform reference;
-        public Image save;
+        Image save;
 
         void Start()
         {
             score = GetComponent<TextMeshProUGUI>();
+
+
         }
 
         // Update is called once per frame
@@ -29,14 +32,15 @@ namespace MetalRay
             score.text = "" + scoreValue;
             killCounter.text = "" + killCounterValue;
 
-           if (counter == 10)
+
+            if(killCounterValue < 10)
             {
-
-               Phrases();
-               counter = 0;
-           }
-
-            if (killCounterValue >= 10 && killCounterValue < 20)
+                Destroy(save);
+                multiplier[0].SetActive(false);
+                multiplier[1].SetActive(false);
+                multiplier[2].SetActive(false);
+            }
+            else if (killCounterValue >= 10 && killCounterValue < 20)
             {
                 multiplier[0].SetActive(true);
 
@@ -53,20 +57,33 @@ namespace MetalRay
                 multiplier[2].SetActive(true);
 
             }
+            killTimer += Time.deltaTime;
+
+            if (killTimer >= 10)
+            {
+                killCounterValue = 0;
+            }
+
+            if (counter == 10)
+            {
+
+                Phrases();
+                counter = 0;
+            }
         }
 
         public void Phrases()
         {
 
             var randomPhrase = phrases[Random.Range(0, phrases.Length)];
-          
-           
-            if(save != null)
+
+
+            if (save != null)
             {
                 Destroy(save);
-                
+
             }
-             save = Instantiate(randomPhrase, reference.transform);
+            save = Instantiate(randomPhrase, reference.transform);
         }
     }
 }

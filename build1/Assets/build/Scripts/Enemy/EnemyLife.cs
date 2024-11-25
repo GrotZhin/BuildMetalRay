@@ -34,29 +34,35 @@ namespace MetalRay
                 Die();
                 Score.killCounterValue += 1;
                 Score.counter += 1;
-                if (Score.killCounterValue <= 10)
+                
+                if (Score.killCounterValue <= 5)
                 {   
-                    
+                    Score.killTimer = 0;
                     Score.scoreValue += 10;
                 }
                 else if (Score.killCounterValue > 10 && Score.killCounterValue < 20)
                 {   
+                    Score.killTimer = 0;
                     Score.scoreValue += 20;
                 }
                 else if (Score.killCounterValue > 20 && Score.killCounterValue < 30)
                 {
+                    Score.killTimer = 0;
                     Score.scoreValue += 30;
                 }
                 else if (Score.killCounterValue > 30 && Score.killCounterValue < 40)
                 {
+                    Score.killTimer = 0;
                     Score.scoreValue += 40;
                 }
                 else if (Score.killCounterValue > 40 && Score.killCounterValue < 50)
                 {
+                    Score.killTimer = 0;
                     Score.scoreValue += 50;
                 }
                 else if (Score.killCounterValue > 50)
                 {
+                    Score.killTimer = 0;
                     Score.scoreValue += 50;
                 }
 

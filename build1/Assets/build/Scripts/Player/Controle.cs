@@ -1,7 +1,6 @@
 using System.Threading.Tasks;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace MetalRay
 {
@@ -11,6 +10,8 @@ namespace MetalRay
     [SerializeField] float smoothness = 0.1f;
     [SerializeField] float leanAngle = 30f;
     [SerializeField] float leanSpeed = 5f;
+    public new CapsuleCollider collider;
+    float dashTime = 0f;
 
     [SerializeField] GameObject model;
 
@@ -23,16 +24,26 @@ namespace MetalRay
 
     Vector3 velocidadeAtual;
     Vector3 targetPosition;
-    
-
-    void Start()
-    {
-      
-  
-    }
 
     void Update()
     {
+      if (Input.GetKeyDown(KeyCode.LeftShift))
+      {
+        collider.enabled = false;
+        speed = 7f;
+    
+      }
+      if (collider.enabled == false)
+      {
+        dashTime += Time.deltaTime;
+        if (dashTime >= 0.5f)
+        {
+          collider.enabled = true;
+          speed = 5f;
+          dashTime = 0f;
+
+        }
+      }
       targetPosition += new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0f) * (speed * Time.deltaTime);
       //Calcular min e max de X e Y baseado na camera
       var minPlayerX = cameraFollow.position.x + minX;
@@ -58,16 +69,7 @@ namespace MetalRay
       transform.localEulerAngles = new Vector3(0f, newYRotation, 0f);
 
     }
-    void OnTriggerEnter(Collider hitInfo){
-         
 
-          if (hitInfo.gameObject.CompareTag("Finish"))
-          {
-           
-            SceneManager.LoadScene("win");
-          }
-    }
-  
-  
+
   }
 }

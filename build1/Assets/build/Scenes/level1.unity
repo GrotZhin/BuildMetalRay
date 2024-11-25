@@ -4638,6 +4638,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1888281932}
     - target: {fileID: 5274131506487436153, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
+      propertyPath: collider
+      value: 
+      objectReference: {fileID: 923150894}
+    - target: {fileID: 5274131506487436153, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
       propertyPath: killtimer
       value: 0
       objectReference: {fileID: 0}
@@ -4665,6 +4669,10 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6476819527391345879, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
+      propertyPath: collider
+      value: 
+      objectReference: {fileID: 923150894}
     - target: {fileID: 6476819527391345879, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
       propertyPath: cameraFollow
       value: 

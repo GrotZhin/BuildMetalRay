@@ -20,8 +20,9 @@ namespace MetalRay
         public GameObject lifeBar;
         public GameObject model;
         public GameObject hitSprite;
-
+        public new CapsuleCollider collider;
         public GameObject deathEffect;
+        float iframe = 0f;
 
         public TextMeshProUGUI textoVida;
 
@@ -38,6 +39,9 @@ namespace MetalRay
         public void TakeDamage(int damage)
         {
             life -= damage;
+            collider.enabled = false;
+            
+            
             soundManager.PlaySound(SoundType.PLAYERHIT);
 
             if (life <= 0)
@@ -75,7 +79,16 @@ namespace MetalRay
         }
         void Update()
         {
-
+            if (collider.enabled == false)
+            {
+                iframe += Time.deltaTime;
+                 if (iframe >= 1f)
+            {
+                collider.enabled = true;
+                iframe = 0;
+            }
+            }
+           
             if (die == true)
             {
                 killtimer += Time.deltaTime;

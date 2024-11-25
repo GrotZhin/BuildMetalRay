@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using System;
+using Unity.VisualScripting;
+using UnityEditor;
 
 namespace MetalRay
 {
@@ -13,9 +15,14 @@ namespace MetalRay
         [SerializeField] private Slider musicSlider;
         [SerializeField] private Slider geralSlider;
         [SerializeField] private Slider sfxSlider;
+        public static volumeSettings volume;
 
         private void Start()
         {
+            if (volume == null)
+            {
+                volume = this;
+            }
 
             if (PlayerPrefs.HasKey("musicVolume"))
             {
@@ -56,7 +63,44 @@ namespace MetalRay
             PlayerPrefs.SetFloat("geralVolume", volume);
 
         }
+        public void DistorcionSongOn()
+        {
+            float volume = musicSlider.value;
 
+            mixer.SetFloat("distorcion", Mathf.Log10(volume) * 20);
+        }
+        public void DefaultSongOn()
+        {
+            float volume = musicSlider.value;
+
+            mixer.SetFloat("default", Mathf.Log10(volume) * 20);
+        }
+        public void ChorusSongOn()
+        {
+            float volume = musicSlider.value;
+            mixer.SetFloat("chorus", Mathf.Log10(volume) * 20);
+        }
+        public void DelayOn()
+        {
+            float volume = musicSlider.value;
+            mixer.SetFloat("delay", Mathf.Log10(volume) * 20);
+        }
+        public void DistorcionSongOff()
+        {
+            mixer.SetFloat("distorcion", -80.0f);
+        }
+        public void DefaultSongOff()
+        {
+            mixer.SetFloat("default", -80.0f);
+        }
+        public void ChorusSongOff()
+        {
+            mixer.SetFloat("chorus", -80f);
+        }
+        public void DelayOff()
+        {
+            mixer.SetFloat("delay", -80f);
+        }
         private void LoadVolume()
         {
 
@@ -68,5 +112,6 @@ namespace MetalRay
             SetMusicVolume();
             SetSfxVolume();
         }
+
     }
 }

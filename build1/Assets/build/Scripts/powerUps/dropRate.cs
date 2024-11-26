@@ -7,6 +7,7 @@ namespace MetalRay
     {
 
         [SerializeField] GameObject[] powerUp;
+        [SerializeField] int dropChance;
         
 
         public void DropPowerUp()
@@ -14,14 +15,9 @@ namespace MetalRay
             var item = powerUp[Random.Range(0, powerUp.Length)];
             int dropRate = UnityEngine.Random.Range(0, 100);
 
-            if (dropRate <= 20 && dropRate > 10)
+            if (dropRate <= dropChance)
             { 
                 Instantiate(item, transform.position, Quaternion.identity);
-            }else if (dropRate <= 10 && dropRate > 0)
-           
-            {
-                Instantiate(item, transform.position, Quaternion.identity);
-                
             }
 
         }

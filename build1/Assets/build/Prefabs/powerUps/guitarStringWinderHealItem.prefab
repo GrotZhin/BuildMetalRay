@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 09b79caa104b69b4e93fd931ee41dcf1, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -2577548232221058511, guid: 09b79caa104b69b4e93fd931ee41dcf1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.04
@@ -103,6 +107,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 09b79caa104b69b4e93fd931ee41dcf1, type: 3}
       propertyPath: m_Name
       value: guitarStringWinderHealItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 09b79caa104b69b4e93fd931ee41dcf1, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7202271454713460447, guid: 09b79caa104b69b4e93fd931ee41dcf1, type: 3}
       propertyPath: m_Materials.Array.data[0]

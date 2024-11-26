@@ -273,6 +273,10 @@ MonoBehaviour:
   powerUp:
   - {fileID: 8709931381132379278, guid: c6ed320ce90c2e8449e4c3b88b109101, type: 3}
   - {fileID: 1037112439936919201, guid: 5be5eb014f8cf7549bce2c1b3a9b1b96, type: 3}
+  - {fileID: 2923852724194722889, guid: 2c04da166ec81654ab7a4aa196cda38c, type: 3}
+  - {fileID: 3119677975701721125, guid: 41baa3ba6d7842d43a4427ccb5c2f319, type: 3}
+  - {fileID: 7165834762841451026, guid: 17800fff7cfb3654d83ab547f5b14970, type: 3}
+  dropChance: 20
 --- !u!1001 &2234877522181287813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -454,6 +458,10 @@ MonoBehaviour:
   powerUp:
   - {fileID: 8709931381132379278, guid: c6ed320ce90c2e8449e4c3b88b109101, type: 3}
   - {fileID: 1037112439936919201, guid: 5be5eb014f8cf7549bce2c1b3a9b1b96, type: 3}
+  - {fileID: 2923852724194722889, guid: 2c04da166ec81654ab7a4aa196cda38c, type: 3}
+  - {fileID: 3119677975701721125, guid: 41baa3ba6d7842d43a4427ccb5c2f319, type: 3}
+  - {fileID: 7165834762841451026, guid: 17800fff7cfb3654d83ab547f5b14970, type: 3}
+  dropChance: 20
 --- !u!54 &5407059891693550921
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -652,6 +660,10 @@ MonoBehaviour:
   powerUp:
   - {fileID: 8709931381132379278, guid: c6ed320ce90c2e8449e4c3b88b109101, type: 3}
   - {fileID: 1037112439936919201, guid: 5be5eb014f8cf7549bce2c1b3a9b1b96, type: 3}
+  - {fileID: 2923852724194722889, guid: 2c04da166ec81654ab7a4aa196cda38c, type: 3}
+  - {fileID: 3119677975701721125, guid: 41baa3ba6d7842d43a4427ccb5c2f319, type: 3}
+  - {fileID: 7165834762841451026, guid: 17800fff7cfb3654d83ab547f5b14970, type: 3}
+  dropChance: 20
 --- !u!54 &5664592562437977051
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -892,6 +904,10 @@ MonoBehaviour:
   powerUp:
   - {fileID: 8709931381132379278, guid: c6ed320ce90c2e8449e4c3b88b109101, type: 3}
   - {fileID: 1037112439936919201, guid: 5be5eb014f8cf7549bce2c1b3a9b1b96, type: 3}
+  - {fileID: 2923852724194722889, guid: 2c04da166ec81654ab7a4aa196cda38c, type: 3}
+  - {fileID: 3119677975701721125, guid: 41baa3ba6d7842d43a4427ccb5c2f319, type: 3}
+  - {fileID: 7165834762841451026, guid: 17800fff7cfb3654d83ab547f5b14970, type: 3}
+  dropChance: 20
 --- !u!1 &7772325950745315440 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3605733846079501619, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}

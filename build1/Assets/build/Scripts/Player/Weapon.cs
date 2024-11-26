@@ -7,14 +7,17 @@ namespace MetalRay
 {
     public class Weapon : MonoBehaviour
     {
-        public Transform firePoint;
+        public Transform[] firePoints;
         public GameObject[] shootPrefab;
 
         public int damage;
-        int i = 0;
+       public static int i = 0;
+       public static int j = 0;
         public float powerUpTimer = 10f;
         public float distorcionTimer = 0;
         //  public GameObject muzzlePrefab;
+        float fireTimer = 0;
+        public static float fireRate = 0.2f;
 
         public GameObject muzzleVFX;
        
@@ -26,31 +29,31 @@ namespace MetalRay
         }
         void Update()
         {
-            if (Input.GetButtonDown("Fire1"))
+            fireTimer += Time.deltaTime;
+            if (fireTimer >= fireRate && Input.GetButtonDown("Fire1"))
             {
 
                 Shoot();
+                fireTimer = 0f;
                 
             }
-            if (i == 1)
-            {
-                distorcionTimer += Time.deltaTime;
-                if (distorcionTimer >= powerUpTimer)
-                {
-                    distorcionTimer = 0;
-                    distorcionPowerUp.active = false;
-                    Debug.Log(distorcionPowerUp.active);
-                    i = 0;
-                }
-
-            }
+           
         }
 
         public void Shoot()
         {
             GameObject shoot = shootPrefab[i];
             
-            Instantiate(shoot, firePoint.position, transform.rotation);
+            if (ChorusPowerUp.active == false)
+            {
+                Instantiate(shoot, firePoints[0].position, transform.rotation);
+            }
+            else if(ChorusPowerUp.active == true)
+            {
+                Instantiate(shoot, firePoints[1].position, transform.rotation);
+                Instantiate(shoot, firePoints[2].position, transform.rotation);
+            }
+          
             Instantiate(muzzleVFX, transform);
         }
 

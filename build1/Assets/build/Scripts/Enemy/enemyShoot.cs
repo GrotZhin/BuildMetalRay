@@ -23,23 +23,7 @@ namespace MetalRay
             soundManager.PlaySound(SoundType.OTOMATOME);
             
         }
-        void Update()
-        {
-            if(ReverbPowerUp.active == true)
-            Debug.Log(ReverbPowerUp.active);
-            {
-                time += Time.deltaTime;
-                Debug.Log(time);
-                if (time >= 10f)
-                {
-                    speed = 3;
-                    ReverbPowerUp.active = false;
-                    Debug.Log(ReverbPowerUp.active);
-                    time = 0;
-                } 
-                
-            }
-        }
+      
        
         
         void OnTriggerEnter(Collider hitInfo){

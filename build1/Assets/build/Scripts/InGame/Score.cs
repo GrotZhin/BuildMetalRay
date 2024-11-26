@@ -85,5 +85,6 @@ namespace MetalRay
             }
             save = Instantiate(randomPhrase, reference.transform);
         }
+        
     }
 }

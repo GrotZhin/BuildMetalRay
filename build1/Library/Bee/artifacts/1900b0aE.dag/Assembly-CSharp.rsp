@@ -390,6 +390,8 @@
 "Assets/build/Scripts/Player/PlayerLife.cs"
 "Assets/build/Scripts/Player/Shoot.cs"
 "Assets/build/Scripts/Player/Weapon.cs"
+"Assets/build/Scripts/powerUps/ChorusPowerUp.cs"
+"Assets/build/Scripts/powerUps/DelayPowerUp.cs"
 "Assets/build/Scripts/powerUps/distorcionPowerUp.cs"
 "Assets/build/Scripts/powerUps/dropRate.cs"
 "Assets/build/Scripts/powerUps/ReverbPowerUp.cs"

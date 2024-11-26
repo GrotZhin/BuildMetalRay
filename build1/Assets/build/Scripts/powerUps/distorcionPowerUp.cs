@@ -9,6 +9,7 @@ namespace MetalRay
   {
     public static bool active;
     public GameObject model;
+    float timer;
     void OnTriggerEnter(Collider other)
     {
       Weapon weapon = other.GetComponent<Weapon>();
@@ -32,6 +33,20 @@ namespace MetalRay
 
     void Update()
     {
+      if (active == true)
+      {
+        timer += Time.deltaTime;
+        if (timer >= 10f)
+        {
+          timer = 0;
+          active = false;
+          Weapon.i = 0;
+
+          Destroy(this.gameObject);
+
+        }
+
+      }
       if (active == false)
       {
         volumeSettings.volume.DefaultSongOn();

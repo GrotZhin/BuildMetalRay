@@ -140,6 +140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 1957856627}
+  vfx: {fileID: 1470910182122251071, guid: 4a7dcd4b70c6e5e41948dab4be55707b, type: 3}
+  vfx2: {fileID: 1470910182122251071, guid: 060a9252104122d4ebbcc71da12a86ad, type: 3}
+  vfx3: {fileID: 1470910182122251071, guid: d76caff9b58a39640800ab8ac042f987, type: 3}
 --- !u!1 &91252250
 GameObject:
   m_ObjectHideFlags: 0

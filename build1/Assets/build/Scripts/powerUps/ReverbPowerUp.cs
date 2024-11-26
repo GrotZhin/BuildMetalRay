@@ -9,6 +9,11 @@ namespace MetalRay
     {
         public static bool active;
         public GameObject model;
+
+         public ParticleSystem vfx;
+         public ParticleSystem vfx2;
+         public ParticleSystem vfx3;
+
         void OnTriggerEnter(Collider other)
         {
             active = true;
@@ -23,6 +28,9 @@ namespace MetalRay
             {
                 enemyShoot.speed = 1.5f;
                 Destroy(model);
+                Instantiate(vfx, transform.position, Quaternion.identity);
+                Instantiate(vfx2, transform.position, Quaternion.identity);
+                Instantiate(vfx3, transform.position, Quaternion.identity);
             }
 
         }

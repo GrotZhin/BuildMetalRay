@@ -140,8 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4459f9bc377740a4696859c1f8b41855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxhit: {fileID: 1470910182122251071, guid: ca7c287a01695144fac4b5de7b5c20fa, type: 3}
-  vfxhit2: {fileID: 5479206747836332114, guid: 46f53e7485abd29489dcf556f6c67b22, type: 3}
+  vfx: {fileID: 1470910182122251071, guid: ca7c287a01695144fac4b5de7b5c20fa, type: 3}
+  vfx2: {fileID: 5479206747836332114, guid: 46f53e7485abd29489dcf556f6c67b22, type: 3}
   restaure: 40
 --- !u!65 &2804978925420733784
 BoxCollider:

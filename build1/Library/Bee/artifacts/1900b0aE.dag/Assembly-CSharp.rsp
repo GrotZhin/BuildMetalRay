@@ -392,6 +392,7 @@
 "Assets/build/Scripts/Player/Weapon.cs"
 "Assets/build/Scripts/powerUps/distorcionPowerUp.cs"
 "Assets/build/Scripts/powerUps/dropRate.cs"
+"Assets/build/Scripts/powerUps/ReverbPowerUp.cs"
 "Assets/build/Scripts/soundManangers/soundManager.cs"
 "Assets/build/Scripts/soundManangers/volumeSettings.cs"
 -langversion:9.0

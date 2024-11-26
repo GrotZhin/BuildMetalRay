@@ -17,12 +17,12 @@ namespace MetalRay
         //  public GameObject muzzlePrefab;
 
         public GameObject muzzleVFX;
-        distorcionPowerUp distorcion;
+       
 
 
         void Start()
         {
-            distorcion = GetComponent<distorcionPowerUp>();
+           
         }
         void Update()
         {
@@ -38,7 +38,8 @@ namespace MetalRay
                 if (distorcionTimer >= powerUpTimer)
                 {
                     distorcionTimer = 0;
-                    distorcion.active = false;
+                    distorcionPowerUp.active = false;
+                    Debug.Log(distorcionPowerUp.active);
                     i = 0;
                 }
 

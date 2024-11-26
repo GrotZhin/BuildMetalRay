@@ -69,6 +69,13 @@ namespace MetalRay
 
             mixer.SetFloat("distorcion", Mathf.Log10(volume) * 20);
         }
+        public void ReverbSongOn()
+        {
+            float volume = musicSlider.value;
+
+            mixer.SetFloat("reverb", Mathf.Log10(volume) * 20);
+        }
+
         public void DefaultSongOn()
         {
             float volume = musicSlider.value;
@@ -78,17 +85,25 @@ namespace MetalRay
         public void ChorusSongOn()
         {
             float volume = musicSlider.value;
+
             mixer.SetFloat("chorus", Mathf.Log10(volume) * 20);
         }
+        
         public void DelayOn()
         {
             float volume = musicSlider.value;
+
             mixer.SetFloat("delay", Mathf.Log10(volume) * 20);
         }
         public void DistorcionSongOff()
         {
             mixer.SetFloat("distorcion", -80.0f);
         }
+        public void ReverbSongOff()
+        {
+            mixer.SetFloat("reverb", -80.0f);
+        }
+
         public void DefaultSongOff()
         {
             mixer.SetFloat("default", -80.0f);

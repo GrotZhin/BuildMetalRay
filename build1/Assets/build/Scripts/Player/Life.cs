@@ -7,16 +7,16 @@ namespace MetalRay
 {
     public class NewBehaviourScript : MonoBehaviour
     {
-    public ParticleSystem vfx;
-     public ParticleSystem vfx2;
+    public ParticleSystem vfxhit;
+     public ParticleSystem vfxhit2;
      public int restaure = 40;
      void OnTriggerEnter(Collider hitInfo){
            PlayerLife playerLife = hitInfo.GetComponent<PlayerLife>();
            if(playerLife != null){
                 playerLife.RestaureLife(restaure);
                 Destroy(gameObject);
-                Instantiate(vfx, transform.position, Quaternion.identity);
-                Instantiate(vfx2, transform.position, Quaternion.identity);
+                Instantiate(vfxhit, transform.position, Quaternion.identity);
+                Instantiate(vfxhit2, transform.position, Quaternion.identity);
            }
     }
 }

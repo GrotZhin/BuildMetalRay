@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,6 +24,15 @@ namespace MetalRay
         public new CapsuleCollider collider;
         public GameObject deathEffect;
         float iframe = 0f;
+        bool hitbool = false;
+
+        [SerializeField] private GameObject flashEffect ;
+        [SerializeField] private GameObject Sakihit ;
+        public float hitcamtimer;
+        public float hitcamdur;
+
+        bool flashonoff = true;
+        int flashstop ;
 
         public TextMeshProUGUI textoVida;
 
@@ -42,7 +52,10 @@ namespace MetalRay
         {
             life -= damage;
             collider.enabled = false;
-            
+
+
+           hitbool= true;
+            FlashEffect();
             
             soundManager.PlaySound(SoundType.PLAYERHIT);
 
@@ -122,6 +135,11 @@ namespace MetalRay
 
             LifeBar();
 
+            if (hitbool == true)
+            {
+                Hitcam();
+            }
+
         }
 
         public void LifeBar()
@@ -138,5 +156,69 @@ namespace MetalRay
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(model.gameObject);
         }
+
+        void FlashEffect()
+        {
+
+           InvokeRepeating("Flash",0f,0.08f);
+
+        }
+        void Flash(){
+
+            if (flashonoff)
+            {
+            flashEffect.SetActive(false);
+            flashonoff= false;
+            flashstop ++;
+            }
+            else 
+            { 
+            flashEffect.SetActive(true);
+            flashonoff= true;
+            
+            }
+            if (flashstop >= 3f)
+            {
+
+            CancelInvoke("Flash");
+            flashEffect.SetActive(false);
+            flashstop = 0;
+
+            }
+        
+
+        }
+         void Hitcam()
+        {
+
+          hitcamtimer += Time.deltaTime;
+
+          if (hitcamtimer <= hitcamdur)
+          {
+            
+            Sakihit.SetActive(true);
+
+          }
+          
+          if (hitcamtimer >= hitcamdur)
+          {
+            Debug.Log("qaaaaaaaaahhhhhhhh");
+            Sakihit.SetActive(false);
+            hitbool = false;
+            hitcamtimer = 0;
+          }
+
+          
+          
+        }
+
     }
+
 }
+            
+        
+    
+        
+
+    
+

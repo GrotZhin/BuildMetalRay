@@ -12,8 +12,9 @@ namespace MetalRay
     float timer;
     void OnTriggerEnter(Collider other)
     {
+      
       Weapon weapon = other.GetComponent<Weapon>();
-
+      timer = 0f;
       active = true;
       if (active == true)
       {

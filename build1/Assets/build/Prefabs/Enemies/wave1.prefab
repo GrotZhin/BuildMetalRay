@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1370a9ea1d2480e49b10e4702a3a1096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 2
+  spd: 1
 --- !u!114 &2104762936579373971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,6 +73,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3682704429661684977}
     m_Modifications:
+    - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
+      propertyPath: fireRate
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
+      propertyPath: fireTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -215,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1370a9ea1d2480e49b10e4702a3a1096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 2
+  spd: 1.5
 --- !u!114 &3207871591032046191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +293,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3682704429661684977}
     m_Modifications:
+    - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
+      propertyPath: fireRate
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
+      propertyPath: fireTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -427,7 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1370a9ea1d2480e49b10e4702a3a1096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 2
+  spd: 1.5
 --- !u!114 &4929875542763041748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +513,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3682704429661684977}
     m_Modifications:
+    - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
+      propertyPath: fireRate
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
+      propertyPath: fireTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -629,7 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1370a9ea1d2480e49b10e4702a3a1096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 2
+  spd: 1.5
 --- !u!114 &3980013507598773888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,6 +733,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3682704429661684977}
     m_Modifications:
+    - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
+      propertyPath: fireRate
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
+      propertyPath: fireTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8451777913442849241, guid: cb1f480e84b12ad4981ba1f8c585ceaf, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -846,7 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1370a9ea1d2480e49b10e4702a3a1096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 2
+  spd: 1.5
 --- !u!114 &8719117543488841163
 MonoBehaviour:
   m_ObjectHideFlags: 0

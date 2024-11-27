@@ -12,7 +12,7 @@ namespace MetalRay
         float time;
         void OnTriggerEnter(Collider other)
         {
-           
+            time = 0f;
             active = true;
             if (active == true)
             {

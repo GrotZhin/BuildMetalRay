@@ -16,20 +16,23 @@ namespace MetalRay
         public GameObject deathEffect;
 
         public ParticleSystem vfxhit;
-    
+        int i = 0;
+        Scene scene;
+       public GameObject model;
 
         public void TakeDamage(int damage)
         {
-
+            scene = SceneManager.GetActiveScene();    
             life -= damage;
             if (life <= 0)
             {
-                Die();
-                Score.scoreValue += 2000;
-                SceneManager.LoadScene("win");
+                WinCondition.i +=1;
                
+                Score.scoreValue += 2000 * EnemyLife.multiplier;
+                Die();
+                 
             }
-
+           
 
         }
         

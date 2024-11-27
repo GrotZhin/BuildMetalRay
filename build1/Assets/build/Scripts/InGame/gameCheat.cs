@@ -10,19 +10,17 @@ namespace MetalRay
         Scene scene;
         void Start()
         {
-        scene = SceneManager.GetActiveScene();
+      
         }
-
-        // Update is called once per frame
-        void Update()
+        public void Level1()
         {
-            if ( scene.name == ("level1") && Input.GetKeyDown(KeyCode.Tab))
-            {
-                SceneManager.LoadScene("level2");
-            }
-             if(scene.name == ("level2") && Input.GetKeyDown(KeyCode.Tab)){
-                 SceneManager.LoadScene("level1");
-            }
+            SceneManager.LoadScene("level1");
         }
+        public void Level2()
+        {
+            SceneManager.LoadScene("level2");
+        }
+      
+        
     }
 }

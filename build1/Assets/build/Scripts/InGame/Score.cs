@@ -22,8 +22,8 @@ namespace MetalRay
         void Start()
         {
             score = GetComponent<TextMeshProUGUI>();
-
-
+            counter = 0;
+            killTimer = 0;
         }
 
         // Update is called once per frame
@@ -51,11 +51,15 @@ namespace MetalRay
                 multiplier[1].SetActive(true);
 
             }
-            else if (Score.killCounterValue > 30 && Score.killCounterValue < 40)
+            else if (killCounterValue > 30 && killCounterValue < 40)
             {
                 multiplier[1].SetActive(false);
                 multiplier[2].SetActive(true);
 
+            }
+            else if(killCounterValue > 40)
+            {
+                 multiplier[2].SetActive(true);
             }
             killTimer += Time.deltaTime;
 
@@ -64,7 +68,7 @@ namespace MetalRay
                 killCounterValue = 0;
             }
 
-            if (counter == 10)
+            if (counter >= 10)
             {
 
                 Phrases();

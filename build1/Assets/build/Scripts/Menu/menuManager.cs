@@ -23,7 +23,11 @@ namespace MetalRay
 
         void Update()
         {
-            if (gameMenu.activeSelf == false && scene.name == ("level1") && Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                SceneManager.LoadScene("GameCheat");
+            }
+            if (gameMenu.activeSelf == false && (scene.name == ("level1") || scene.name == ("level2")) && Input.GetKeyDown(KeyCode.Escape))
             {
                 Time.timeScale = 0;
                 gameMenu.SetActive(true);
@@ -33,7 +37,7 @@ namespace MetalRay
                 optionMenu.SetActive(false);
                 gameMenu.SetActive(true);
             }
-            else if (gameMenu.activeSelf == true && scene.name == ("level1") && Input.GetKeyDown(KeyCode.Escape))
+            else if (gameMenu.activeSelf == true && (scene.name == ("level1") || scene.name == ("level2")) && Input.GetKeyDown(KeyCode.Escape))
             {
                 Time.timeScale = 1;
                 gameMenu.SetActive(false);
@@ -72,6 +76,11 @@ namespace MetalRay
             Debug.Log("kitou");
             Application.Quit();
         }
+        public void NextLevel()
+        {
+            Score.killTimer = 0f;
+            SceneManager.LoadScene("level2");
+        }
         public void Back()
         {
             if (scene.name == ("MainMenu"))
@@ -80,6 +89,11 @@ namespace MetalRay
                 optionMenu.SetActive(false);
             }
             else if(scene.name == ("level1"))
+            {
+                optionMenu.SetActive(false);
+                gameMenu.SetActive(true);
+            } 
+            else if(scene.name == ("level2"))
             {
                 optionMenu.SetActive(false);
                 gameMenu.SetActive(true);

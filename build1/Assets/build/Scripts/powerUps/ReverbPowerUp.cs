@@ -16,7 +16,8 @@ namespace MetalRay
          float time;
 
         void OnTriggerEnter(Collider other)
-        {
+        {   
+            time = 0f;
             active = true;
             if (active == true)
             {
@@ -27,7 +28,7 @@ namespace MetalRay
 
             if (other.gameObject.CompareTag("Player"))
             {
-                enemyShoot.speed = 1.5f;
+                enemyShoot.speed = 2f;
                 Destroy(model);
                 Instantiate(vfx, transform.position, Quaternion.identity);
                 Instantiate(vfx2, transform.position, Quaternion.identity);

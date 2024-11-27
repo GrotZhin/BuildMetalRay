@@ -29,11 +29,13 @@ namespace MetalRay
         float killtimer = 0f;
         bool die;
 
+        Scene scene;
 
         void Start()
         {
             life = maxLife;
             die = false;
+            scene = SceneManager.GetActiveScene();
         }
 
         public void TakeDamage(int damage)
@@ -45,8 +47,16 @@ namespace MetalRay
             soundManager.PlaySound(SoundType.PLAYERHIT);
 
             if (life <= 0)
-            {
+            {   
                 Die();
+                if (scene.name == ("level1"))
+                {
+                    Retry.i =1;
+                }else if(scene.name == ("level2"))
+                {
+                    Retry.i =2;
+                }
+               
             }
 
         }

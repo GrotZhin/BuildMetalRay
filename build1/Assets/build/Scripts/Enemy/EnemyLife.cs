@@ -10,6 +10,7 @@ namespace MetalRay
     public class EnemyLife : MonoBehaviour
     {
         public int life;
+        public static int multiplier;
 
         public GameObject deathEffect;
 
@@ -35,35 +36,35 @@ namespace MetalRay
                 Score.killCounterValue += 1;
                 Score.counter += 1;
                 
-                if (Score.killCounterValue <= 5)
+                if (Score.killCounterValue <= 10)
                 {   
+                    multiplier = 1;
                     Score.killTimer = 0;
-                    Score.scoreValue += 10;
+                    Score.scoreValue += 10 * multiplier;
                 }
-                else if (Score.killCounterValue > 10 && Score.killCounterValue < 20)
+                else if (Score.killCounterValue > 10 && Score.killCounterValue <= 20)
                 {   
+                     multiplier = 2;
                     Score.killTimer = 0;
-                    Score.scoreValue += 20;
+                    Score.scoreValue += 10 * multiplier;
                 }
-                else if (Score.killCounterValue > 20 && Score.killCounterValue < 30)
+                else if (Score.killCounterValue > 20 && Score.killCounterValue <= 30)
                 {
+                    multiplier = 3;
                     Score.killTimer = 0;
-                    Score.scoreValue += 30;
+                    Score.scoreValue += 10*multiplier;
                 }
-                else if (Score.killCounterValue > 30 && Score.killCounterValue < 40)
-                {
+                else if (Score.killCounterValue > 30 && Score.killCounterValue <= 40)
+                {   
+                    multiplier = 4;
                     Score.killTimer = 0;
-                    Score.scoreValue += 40;
+                    Score.scoreValue += 10*multiplier;
                 }
-                else if (Score.killCounterValue > 40 && Score.killCounterValue < 50)
-                {
+                
+                else if (Score.killCounterValue > 40)
+                {   multiplier = 4;
                     Score.killTimer = 0;
-                    Score.scoreValue += 50;
-                }
-                else if (Score.killCounterValue > 50)
-                {
-                    Score.killTimer = 0;
-                    Score.scoreValue += 50;
+                    Score.scoreValue += 10*multiplier;
                 }
 
                 dropRate.DropPowerUp();

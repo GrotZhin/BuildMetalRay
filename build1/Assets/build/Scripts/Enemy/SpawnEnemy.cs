@@ -19,7 +19,7 @@ namespace MetalRay
         void Start()
         {
 
-            InvokeRepeating("Spawn", 1f, 5f);
+            InvokeRepeating("Spawn", 1f, 4f);
 
         }
 
@@ -27,7 +27,7 @@ namespace MetalRay
         {
             var random = enemyType[Random.Range(0, enemyType.Length)];
             var enemyTransform = Instantiate(random, spawn.transform);
-            if (i >= 10 && j == 0)
+            if (i >= 20 && j == 0)
             {
                 Instantiate(subBoss, spawn.transform);
                 

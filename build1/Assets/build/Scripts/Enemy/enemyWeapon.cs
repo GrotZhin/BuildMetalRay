@@ -14,9 +14,8 @@ namespace MetalRay
         public GameObject shootPrefab;
         public float fireTime;
 
-        enemyWeapon EnemyWeapon;
-
-        public float fireRate = 0.75f;
+       
+        public float fireRate;
 
         void Start()
         {

@@ -13,6 +13,8 @@ namespace MetalRay
     public new CapsuleCollider collider;
     float dashTime = 0f;
 
+    public Animator animator;
+
     [SerializeField] GameObject model;
 
     [Header("Bordas da Camera")]
@@ -27,10 +29,12 @@ namespace MetalRay
 
     void Update()
     {
+      
       if (Input.GetKeyDown(KeyCode.LeftShift))
       {
         collider.enabled = false;
         speed = 7f;
+        animator.Play("guitar ship_rollani");
     
       }
       if (collider.enabled == false)
@@ -41,7 +45,7 @@ namespace MetalRay
           collider.enabled = true;
           speed = 5f;
           dashTime = 0f;
-
+        
         }
       }
       targetPosition += new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0f) * (speed * Time.deltaTime);
@@ -67,6 +71,7 @@ namespace MetalRay
 
       // Apply the rotation effect
       transform.localEulerAngles = new Vector3(0f, newYRotation, 0f);
+      
 
     }
 

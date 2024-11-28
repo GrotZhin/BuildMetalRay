@@ -388,6 +388,7 @@
 "Assets/build/Scripts/Menu/introTransition.cs"
 "Assets/build/Scripts/Menu/menuManager.cs"
 "Assets/build/Scripts/Player/Controle.cs"
+"Assets/build/Scripts/Player/playAnimation.cs"
 "Assets/build/Scripts/Player/PlayerLife.cs"
 "Assets/build/Scripts/Player/Shoot.cs"
 "Assets/build/Scripts/Player/Weapon.cs"

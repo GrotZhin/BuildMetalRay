@@ -52,9 +52,7 @@ namespace MetalRay
         {
             life -= damage;
             collider.enabled = false;
-
-
-           hitbool= true;
+            hitbool= true;
             FlashEffect();
             
             soundManager.PlaySound(SoundType.PLAYERHIT);

@@ -134,9 +134,6 @@ PrefabInstance:
       addedObject: {fileID: 7720157265267526752}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 60b202e723467494aa5bbf9fe697fce6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8451777913442849241}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 60b202e723467494aa5bbf9fe697fce6, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6349698138210910892}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 60b202e723467494aa5bbf9fe697fce6, type: 3}
       insertIndex: -1
@@ -185,23 +182,6 @@ MonoBehaviour:
   life: 40
   deathEffect: {fileID: 3308732416233299549, guid: 8b4dfd9937c53e94eba7816ba355b53b, type: 3}
   vfxhit: {fileID: 5165246255472843786, guid: 80d56ecff5b950147b3c9615098b99f3, type: 3}
---- !u!114 &-8451777913442849241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7214165771073843327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79ec1911250c3246b0a9d1c187c2953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 6067096878316598516}
-  firePoint1: {fileID: 0}
-  shootPrefab: {fileID: 4096486653031533978, guid: fc242cdac63a0f145ab5851993432e7b, type: 3}
-  fireTime: 2
-  fireRate: 1
 --- !u!114 &6349698138210910892
 MonoBehaviour:
   m_ObjectHideFlags: 0

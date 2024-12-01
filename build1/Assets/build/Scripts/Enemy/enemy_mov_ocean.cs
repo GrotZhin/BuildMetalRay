@@ -7,8 +7,8 @@ public class enemy_mov_ocean : MonoBehaviour
   float sinCenterX;
 
   public bool esquerda;
-  public int amplitude;
-  public int frequency;
+  public float amplitude;
+  public float frequency;
 
 
 

@@ -188,6 +188,7 @@ namespace MetalRay
         }
          void Hitcam()
         {
+          
 
           hitcamtimer += Time.deltaTime;
 

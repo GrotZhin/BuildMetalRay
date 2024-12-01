@@ -9,6 +9,8 @@ namespace MetalRay
   {
     public static bool active;
     public GameObject model;
+
+     public new BoxCollider collider;
     float timer;
     void OnTriggerEnter(Collider other)
     {
@@ -28,6 +30,7 @@ namespace MetalRay
         weapon.DistorcionPowerUp();
 
         Destroy(model);
+        collider.enabled = false;
       }
 
     }

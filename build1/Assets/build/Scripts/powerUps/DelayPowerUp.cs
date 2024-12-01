@@ -9,6 +9,7 @@ namespace MetalRay
     {
         public static bool active;
         public GameObject model;
+         public new BoxCollider collider;
         float time;
         void OnTriggerEnter(Collider other)
         {
@@ -24,7 +25,10 @@ namespace MetalRay
             if (other.gameObject.CompareTag("Player"))
             {
                 Weapon.fireRate = 0.1f;
+                soundManager.PlaySound(SoundType.DELAY);
                 Destroy(model);
+                collider.enabled = false;
+                
             }
 
         }

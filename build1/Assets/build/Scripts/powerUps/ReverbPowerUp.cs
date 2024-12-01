@@ -13,6 +13,9 @@ namespace MetalRay
          public ParticleSystem vfx;
          public ParticleSystem vfx2;
          public ParticleSystem vfx3;
+
+        public new BoxCollider collider;
+
          float time;
 
         void OnTriggerEnter(Collider other)
@@ -30,6 +33,8 @@ namespace MetalRay
             {
                 enemyShoot.speed = 2f;
                 Destroy(model);
+                collider.enabled = false;
+                soundManager.PlaySound(SoundType.REVERB);
                 Instantiate(vfx, transform.position, Quaternion.identity);
                 Instantiate(vfx2, transform.position, Quaternion.identity);
                 Instantiate(vfx3, transform.position, Quaternion.identity);

@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 2848427543159988305}
+  collider: {fileID: -3523002572017990795}
 --- !u!114 &4001562924814362098
 MonoBehaviour:
   m_ObjectHideFlags: 0

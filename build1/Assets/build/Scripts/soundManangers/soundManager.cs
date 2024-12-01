@@ -18,7 +18,13 @@ namespace MetalRay
         PLAYERHIT,
         DISTORCION,
 
-      
+        CHORUS,
+
+        REVERB,
+
+        DELAY,
+
+        HEAL,
 
 
     }

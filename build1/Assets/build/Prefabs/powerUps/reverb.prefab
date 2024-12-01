@@ -168,3 +168,4 @@ MonoBehaviour:
   vfx: {fileID: 1470910182122251071, guid: 3d3c43649550ae944a24fa2c798c10be, type: 3}
   vfx2: {fileID: 1470910182122251071, guid: bc6da40b57c3d2942a4cd27f50e0fe7f, type: 3}
   vfx3: {fileID: 1470910182122251071, guid: 73d6708396d0f66429e95e979e8b67da, type: 3}
+  collider: {fileID: 2979541565348484487}

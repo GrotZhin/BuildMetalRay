@@ -10,7 +10,7 @@ namespace MetalRay
         public static bool active;
         public GameObject model;
          public new BoxCollider collider;
-        float time;
+        public static float time;
         void OnTriggerEnter(Collider other)
         {
             time = 0f;
@@ -26,37 +26,13 @@ namespace MetalRay
             {
                 Weapon.fireRate = 0.1f;
                 soundManager.PlaySound(SoundType.DELAY);
-                Destroy(model);
+                Destroy(this.gameObject);
                 collider.enabled = false;
                 
             }
 
         }
 
-        void Update()
-        {
-            if (active == true)
-                Debug.Log(active);
-            {
-                time += Time.deltaTime;
-                
-                if (time >= 10f)
-                {
-                    Weapon.fireRate = 0.2f;
-                    active = false;
-                    Debug.Log(active);
-                    time = 0;
-                    Destroy(this.gameObject);
-                    
-                }
-
-            }
-            if (active == false)
-            {
-                volumeSettings.volume.DefaultSongOn();
-                volumeSettings.volume.DelayOff();
-                
-            }
-        }
+     
     }
 }

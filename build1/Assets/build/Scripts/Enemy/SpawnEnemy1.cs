@@ -10,7 +10,7 @@ namespace MetalRay
 
         public GameObject[] enemyType;
         public GameObject subBoss;
-        GameObject bossInScreen;
+        public static GameObject bossInScreen;
         int i = 0;
 
         bool boss;
@@ -30,6 +30,7 @@ namespace MetalRay
             if (i %15 == 0 && i!=0)
             {
                 boss = true;
+                Debug.Log(bossInScreen);
                
             }
            
@@ -42,7 +43,8 @@ namespace MetalRay
                 
             }
             i += 1;
-           
+            Debug.Log(i);
+            Debug.Log(bossInScreen);
 
             if (WinCondition.i >=2)
             {

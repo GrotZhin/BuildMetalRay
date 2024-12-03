@@ -12,7 +12,7 @@ namespace MetalRay
 
         
         public new BoxCollider collider;
-        float time;
+        public static float time;
         void OnTriggerEnter(Collider other)
         {
             time = 0f;
@@ -28,34 +28,12 @@ namespace MetalRay
             {
                 Weapon.j = 1;
                 soundManager.PlaySound(SoundType.CHORUS);
-                Destroy(model);
+                Destroy(gameObject);
                 collider.enabled = false;
             }
 
         }
 
-        void Update()
-        {
-            if (active == true)
-                Debug.Log(active);
-            {
-                time += Time.deltaTime;
-                
-                if (time >= 10f)
-                {
-                    Weapon.j = 0;
-                    active = false;
-                    Debug.Log(active);
-                    time = 0;
-                    Destroy(this.gameObject);
-                }
-
-            }
-            if (active == false)
-            {
-                volumeSettings.volume.DefaultSongOn();
-                volumeSettings.volume.ChorusSongOff();
-            }
-        }
+    
     }
 }

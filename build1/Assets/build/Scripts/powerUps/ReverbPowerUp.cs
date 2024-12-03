@@ -16,7 +16,7 @@ namespace MetalRay
 
         public new BoxCollider collider;
 
-         float time;
+         public static float time;
 
         void OnTriggerEnter(Collider other)
         {   
@@ -32,12 +32,12 @@ namespace MetalRay
             if (other.gameObject.CompareTag("Player"))
             {
                 enemyShoot.speed = 2f;
-                Destroy(model);
                 collider.enabled = false;
                 soundManager.PlaySound(SoundType.REVERB);
                 Instantiate(vfx, transform.position, Quaternion.identity);
                 Instantiate(vfx2, transform.position, Quaternion.identity);
                 Instantiate(vfx3, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
             }
 
         }

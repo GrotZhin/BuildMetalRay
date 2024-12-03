@@ -57,10 +57,6 @@ namespace MetalRay
             Instantiate(muzzleVFX, transform);
         }
 
-        public void DistorcionPowerUp()
-        {
-            soundManager.PlaySound(SoundType.DISTORCION);
-            i = 1;
-        }
+      
     }
 }

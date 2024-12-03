@@ -10,14 +10,13 @@ namespace MetalRay
     public static bool active;
     public GameObject model;
 
-     public new BoxCollider collider;
-    float timer;
+    public new BoxCollider collider;
+    public static float timer;
     void OnTriggerEnter(Collider other)
     {
-      
-      Weapon weapon = other.GetComponent<Weapon>();
       timer = 0f;
       active = true;
+      soundManager.PlaySound(SoundType.DISTORCION);
       if (active == true)
       {
         volumeSettings.volume.DistorcionSongOn();
@@ -27,35 +26,13 @@ namespace MetalRay
 
       if (other.gameObject.CompareTag("Player"))
       {
-        weapon.DistorcionPowerUp();
-
-        Destroy(model);
+        Weapon.i =1;
+        Destroy(this.gameObject);
         collider.enabled = false;
       }
 
     }
 
-    void Update()
-    {
-      if (active == true)
-      {
-        timer += Time.deltaTime;
-        if (timer >= 10f)
-        {
-          timer = 0;
-          active = false;
-          Weapon.i = 0;
-
-          Destroy(this.gameObject);
-
-        }
-
-      }
-      if (active == false)
-      {
-        volumeSettings.volume.DefaultSongOn();
-        volumeSettings.volume.DistorcionSongOff();
-      }
-    }
+   
   }
 }

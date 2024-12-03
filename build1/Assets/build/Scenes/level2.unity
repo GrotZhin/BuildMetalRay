@@ -488,7 +488,7 @@ MonoBehaviour:
   - {fileID: 3030471404616492717, guid: f1d61c2f133a45a4aa594856f1d8a2b9, type: 3}
   - {fileID: 3030471404616492717, guid: 337161a2d5b3c2749a401fcdc1144371, type: 3}
   - {fileID: 3030471404616492717, guid: 1731b0dfc3ade864781723ada1629e4e, type: 3}
-  subBoss: {fileID: 7762763515382638266, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+  subBoss: {fileID: 1414678021037925442, guid: 23bb39ea0ade3e946848349ca5d45af4, type: 3}
   spawn: {fileID: 336342787}
 --- !u!1 &384253808 stripped
 GameObject:

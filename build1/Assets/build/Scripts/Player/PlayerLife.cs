@@ -23,6 +23,8 @@ namespace MetalRay
         public GameObject hitSprite;
         public new CapsuleCollider collider;
         public GameObject deathEffect;
+
+         public ParticleSystem vfxdeath;
         float iframe = 0f;
         bool hitbool = false;
 
@@ -157,13 +159,14 @@ namespace MetalRay
             die = true;
             halfBar.fillAmount = 0;
             Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(vfxdeath, transform.position, Quaternion.identity);
             Destroy(model.gameObject);
         }
 
         void FlashEffect()
         {
 
-           InvokeRepeating("Flash",0f,0.08f);
+           InvokeRepeating("Flash",0f,0.06f);
 
         }
         void Flash(){
@@ -180,7 +183,7 @@ namespace MetalRay
             flashonoff= true;
             
             }
-            if (flashstop >= 3f)
+            if (flashstop >= 6f)
             {
 
             CancelInvoke("Flash");

@@ -5,9 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - deathEffect: {instanceID: 0}
-  - scoreText: {instanceID: 0}
-  - vfxhit: {fileID: 5165246255472843786, guid: 80d56ecff5b950147b3c9615098b99f3, type: 3}
-  - vfxhinstinstance: {fileID: 5165246255472843786, guid: 80d56ecff5b950147b3c9615098b99f3, type: 3}
+  - vfxhit: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

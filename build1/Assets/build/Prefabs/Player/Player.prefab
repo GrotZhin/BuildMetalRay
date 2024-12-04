@@ -168,6 +168,7 @@ MonoBehaviour:
   hitSprite: {fileID: 0}
   collider: {fileID: 3333498155685157647}
   deathEffect: {fileID: 7167642141063577736, guid: 532a141c2c5871840846cc3928b30ee7, type: 3}
+  vfxdeath: {fileID: 5479206747836332114, guid: 4645613b3b248bf44a1bacb76388a8b2, type: 3}
   flashEffect: {fileID: 7027448557257518433}
   Sakihit: {fileID: 0}
   hitcamtimer: 0

@@ -15,6 +15,7 @@ namespace MetalRay
         public static float time;
         void OnTriggerEnter(Collider other)
         {
+          
             time = 0f;
             active = true;
             if (active == true)
@@ -29,7 +30,7 @@ namespace MetalRay
                 Weapon.j = 1;
                 soundManager.PlaySound(SoundType.CHORUS);
                 Destroy(gameObject);
-                collider.enabled = false;
+                
             }
 
         }

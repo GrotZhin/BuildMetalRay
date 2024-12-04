@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Unity.Mathematics;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 namespace MetalRay
@@ -12,6 +13,8 @@ namespace MetalRay
     [SerializeField] float leanSpeed = 5f;
     public new CapsuleCollider collider;
     float dashTime = 0f;
+    bool ignore;
+    bool ignore2;
 
     public Animator animator;
 
@@ -30,19 +33,23 @@ namespace MetalRay
     void Update()
     {
       
-      if (Input.GetKeyDown(KeyCode.LeftShift))
+      if (Input.GetKeyDown(KeyCode.LeftShift) )
       {
-        collider.enabled = false;
+        ignore = true;
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("enemyShoot"),true);
         speed = 7f;
         animator.Play("guitar ship_rollani");
     
       }
-      if (collider.enabled == false)
+      if (ignore == true)
       {
         dashTime += Time.deltaTime;
         if (dashTime >= 0.5f)
         {
-          collider.enabled = true;
+          Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
+          Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("enemyShoot"), false);
+          ignore = false;
           speed = 5f;
           dashTime = 0f;
         

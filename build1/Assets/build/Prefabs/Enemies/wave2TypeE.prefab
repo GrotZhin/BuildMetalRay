@@ -253,6 +253,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4534737832989037672}
     m_Modifications:
+    - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
+      propertyPath: esquerda
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
+      propertyPath: amplitude
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
+      propertyPath: frequency
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 13621337154184205, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: m_Name
       value: LAUNCH PAD DROID (1)
@@ -975,6 +987,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4534737832989037672}
     m_Modifications:
+    - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
+      propertyPath: amplitude
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
+      propertyPath: frequency
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 13621337154184205, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: m_Name
       value: LAUNCH PAD DROID

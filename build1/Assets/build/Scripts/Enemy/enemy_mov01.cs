@@ -10,13 +10,13 @@ public class enemy_mov01 : MonoBehaviour
   
     private void FixedUpdate()
     {
-        Vector2 pos = transform.position;
+        
+        
+        float move = -spd * Time.fixedDeltaTime;
 
+        transform.Translate(0, move, 0);
 
-        pos.y -= spd * Time.fixedDeltaTime;
-
-
-        transform.position = pos;
+        
 
     }
    

@@ -14,6 +14,7 @@ namespace MetalRay
     public static float timer;
     void OnTriggerEnter(Collider other)
     {
+      
       timer = 0f;
       active = true;
       soundManager.PlaySound(SoundType.DISTORCION);

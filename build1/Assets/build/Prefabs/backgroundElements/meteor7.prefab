@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1dd263abdea749b4fac7840b0963a319, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1dd263abdea749b4fac7840b0963a319, type: 3}
       propertyPath: m_LocalRotation.w
@@ -55,6 +55,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1dd263abdea749b4fac7840b0963a319, type: 3}
       propertyPath: m_Name
       value: meteor7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1dd263abdea749b4fac7840b0963a319, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

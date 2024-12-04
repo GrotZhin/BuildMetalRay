@@ -35,7 +35,10 @@ namespace MetalRay
                 SetSfxVolume();
             }
         }
-
+        void Update()
+        {
+            
+        }
         public void SetMusicVolume()
         {
             float volume = musicSlider.value;

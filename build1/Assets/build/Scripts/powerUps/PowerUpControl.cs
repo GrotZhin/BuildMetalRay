@@ -6,13 +6,8 @@ namespace MetalRay
 {
     public class PowerUpControl : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
+       
+       
         void Update()
         {
             if (ChorusPowerUp.active == true)
@@ -26,7 +21,7 @@ namespace MetalRay
                     ChorusPowerUp.active = false;
 
                     ChorusPowerUp.time = 0;
-
+                    
                 }
 
             }
@@ -46,7 +41,7 @@ namespace MetalRay
                     DelayPowerUp.active = false;
                     Debug.Log(DelayPowerUp.active);
                     DelayPowerUp.time = 0;
-
+                  
 
                 }
 
@@ -65,7 +60,7 @@ namespace MetalRay
                     distorcionPowerUp.timer = 0;
                     distorcionPowerUp.active = false;
                     Weapon.i = 0;
-
+                    
                 }
 
             }
@@ -86,7 +81,7 @@ namespace MetalRay
                     ReverbPowerUp.active = false;
                     Debug.Log(ReverbPowerUp.active);
                     ReverbPowerUp.time = 0;
-
+                    
                 }
 
             }

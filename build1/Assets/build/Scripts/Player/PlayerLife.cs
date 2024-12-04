@@ -38,6 +38,7 @@ namespace MetalRay
 
         float killtimer = 0f;
         bool die;
+        bool ignore;
 
         Scene scene;
 
@@ -51,7 +52,9 @@ namespace MetalRay
         public void TakeDamage(int damage)
         {
             life -= damage;
-            collider.enabled = false;
+            ignore = true;
+            Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
+            Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("enemyShoot"),true);
             hitbool= true;
             FlashEffect();
             
@@ -100,13 +103,15 @@ namespace MetalRay
         }
         void Update()
         {
-            if (collider.enabled == false)
+            if (ignore == true)
             {
                 iframe += Time.deltaTime;
                  if (iframe >= 1f)
             {
-                collider.enabled = true;
+                Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
+                Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("enemyShoot"),false);   
                 iframe = 0;
+                ignore = false;
             }
             }
            

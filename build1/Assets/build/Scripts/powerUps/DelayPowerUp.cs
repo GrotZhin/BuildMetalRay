@@ -13,6 +13,7 @@ namespace MetalRay
         public static float time;
         void OnTriggerEnter(Collider other)
         {
+            
             time = 0f;
             active = true;
             if (active == true)

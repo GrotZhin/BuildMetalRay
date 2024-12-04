@@ -485,7 +485,7 @@ MonoBehaviour:
   - {fileID: 1270202779891424540, guid: ec0d4457a613b2a46ad8c22fcac8f547, type: 3}
   - {fileID: 1306940623317988745, guid: d70762e5d1d40ed428c822b9351ea2de, type: 3}
   - {fileID: 4186550695566835554, guid: eeaeb58888de2394e8929c1be9498bb6, type: 3}
-  timer: 3
+  reference: {fileID: 359559488}
 --- !u!4 &359559488
 Transform:
   m_ObjectHideFlags: 0
@@ -494,12 +494,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359559486}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 1.1847728, y: 2.788205, z: 43.304092}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 9.19, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 963194228}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &384253808 stripped
 GameObject:
@@ -5325,6 +5325,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1888281932}
     - target: {fileID: 6476819527391345879, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
+      propertyPath: maxX
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476819527391345879, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
+      propertyPath: minX
+      value: -2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476819527391345879, guid: dd4fe4758d6b55b4dba4268f47fe6b22, type: 3}
       propertyPath: cameraFollow
       value: 
       objectReference: {fileID: 963194228}
@@ -5449,6 +5457,9 @@ PrefabInstance:
     - {fileID: 1952160497542056647, guid: 0d428edb99f5a1d45b3f6ba6d6dd15b2, type: 3}
     - {fileID: 2480750379975266168, guid: 0d428edb99f5a1d45b3f6ba6d6dd15b2, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8814462510927299249, guid: 0d428edb99f5a1d45b3f6ba6d6dd15b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 359559488}
     - targetCorrespondingSourceObject: {fileID: 6782017250189909440, guid: 0d428edb99f5a1d45b3f6ba6d6dd15b2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2073488697}
@@ -5623,5 +5634,4 @@ SceneRoots:
   - {fileID: 645918680}
   - {fileID: 1840379554}
   - {fileID: 714711057}
-  - {fileID: 359559488}
   - {fileID: 853575925}

@@ -46,15 +46,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: esquerda
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: amplitude
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: frequency
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13621337154184205, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: m_Name
@@ -132,11 +132,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: amplitude
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: frequency
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13621337154184205, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: m_Name
@@ -210,15 +210,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: esquerda
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: amplitude
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: frequency
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13621337154184205, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: m_Name
@@ -296,11 +296,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: amplitude
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: frequency
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13621337154184205, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: m_Name
@@ -378,11 +378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: amplitude
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3381357748540951529, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: frequency
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13621337154184205, guid: 86613cd1d36705a42aac6180c812e884, type: 3}
       propertyPath: m_Name

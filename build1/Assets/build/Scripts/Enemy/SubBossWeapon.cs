@@ -10,7 +10,7 @@ namespace MetalRay
     public class SubBossWeapon : MonoBehaviour
     {
         public Transform firePoint;
-        public GameObject firePoint1;
+        
         public GameObject shootPrefab;
         public float fireTime;
         public static bool shootOn;

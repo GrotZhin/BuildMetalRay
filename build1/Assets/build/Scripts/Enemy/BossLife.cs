@@ -12,37 +12,68 @@ namespace MetalRay
     public class BossLife : MonoBehaviour
     {
         public int life;
+        public int maxLife;
+
+        public UnityEngine.UI.Image fillBar;
+        public UnityEngine.UI.Image halfBar;
+        public GameObject lifeBar;
 
         public GameObject deathEffect;
 
         public ParticleSystem vfxhit;
         int i = 0;
         Scene scene;
-       public GameObject model;
+        public GameObject model;
 
-        [SerializeField] private GameObject flashEffect ;
+        [SerializeField] private GameObject flashEffect;
+        void Start()
+        {
+            life = maxLife;
 
-        
+            scene = SceneManager.GetActiveScene();
+        }
+
         bool flashonoff = true;
-        int flashstop ;
+        int flashstop;
 
         public void TakeDamage(int damage)
         {
-            scene = SceneManager.GetActiveScene();    
+            scene = SceneManager.GetActiveScene();
             life -= damage;
             FlashEffect();
             if (life <= 0)
             {
                 WinCondition.i = 3;
-               
+
                 Score.scoreValue += 10000 * EnemyLife.multiplier;
                 Die();
-                 
+
             }
-           
+
 
         }
-        
+        void Update()
+        {
+            if (fillBar.fillAmount <= 0.5)
+            {
+                lifeBar.SetActive(false);
+            }
+            else if (fillBar.fillAmount >= 0.5)
+            {
+                lifeBar.SetActive(true);
+            }
+
+            LifeBar();
+        }
+        public void LifeBar()
+        {
+
+            {
+                fillBar.fillAmount = life / maxLife;
+                halfBar.fillAmount = life / maxLife;
+
+            }
+        }
 
         public void Die()
         {
@@ -53,37 +84,38 @@ namespace MetalRay
 
         }
 
-         void FlashEffect()
+        void FlashEffect()
         {
 
-           InvokeRepeating("Flash",0f,0.02f);
+            InvokeRepeating("Flash", 0f, 0.02f);
 
         }
 
-         /* void Flash(){
+        void Flash()
+        {
 
             if (flashonoff)
             {
-            flashEffect.SetActive(false);
-            flashonoff= false;
-            flashstop ++;
+                flashEffect.SetActive(false);
+                flashonoff = false;
+                flashstop++;
             }
-            else 
-            { 
-            flashEffect.SetActive(true);
-            flashonoff= true;
-            
+            else
+            {
+                flashEffect.SetActive(true);
+                flashonoff = true;
+
             }
             if (flashstop >= 2f)
             {
 
-            CancelInvoke("Flash");
-            flashEffect.SetActive(false);
-            flashstop = 0;
+                CancelInvoke("Flash");
+                flashEffect.SetActive(false);
+                flashstop = 0;
 
             }
-        
 
-        } */
+
+        }
     }
 }

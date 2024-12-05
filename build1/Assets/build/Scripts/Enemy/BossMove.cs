@@ -58,30 +58,19 @@ public class BossMove : MonoBehaviour
             Debug.Log(porcent);
             timer = 0;
         }
-
-        else if (porcent <= 100 && porcent > 0)
-        {
-            down = true;
-            porcent = 0;
-        }
-
         if (down == true)
         {
-            SubBossWeapon.shootOn = false;
-            pos.y -= 5 * Time.deltaTime;
-            if (pos.y <= 0)
-            {
-                pos.y = reference.transform.position.y;
-                pos.x = reference.transform.position.x;
 
-            }
-            if (pos.y <= 5.20f && pos.y >= 5.18f)
+            pos.y -= 2 * Time.deltaTime;
+           
+            if (pos.y <= 5.20f && pos.y >= 5.15f)
             {
                 down = false;
-                SubBossWeapon.shootOn = true;
+                
             }
 
         }
+
         transform.position = pos;
     }
 }

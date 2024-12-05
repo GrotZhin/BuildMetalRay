@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4324888250024495969}
   - component: {fileID: 1077360947007253579}
-  - component: {fileID: 1136316799171600789}
   - component: {fileID: -3905522196431282055}
   - component: {fileID: -639038239348859439}
+  - component: {fileID: 4884683046462657068}
+  - component: {fileID: -5524662160424843117}
   m_Layer: 8
   m_Name: discoShoot
   m_TagString: Untagged
@@ -87,21 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1136316799171600789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4096486653031533978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91dae260e85a828499ffe7b5bb15420a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: -3905522196431282055}
-  damage: 10
-  impactEfect: {fileID: 6388375826042388363, guid: ece06eedd6aad074e872c242ca92aa11, type: 3}
 --- !u!54 &-3905522196431282055
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -152,3 +138,34 @@ CapsuleCollider:
   m_Height: 5.95
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4884683046462657068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4096486653031533978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5363c3fd413c44b8c8599168164527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  damage: 10
+  hitFX: {fileID: 0}
+  rb: {fileID: -3905522196431282055}
+--- !u!114 &-5524662160424843117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4096486653031533978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584c507d7c280a8409478df9fa226ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upperLimit: 5
+  lowerLimit: 3
+  bulletPrefab: {fileID: 4096486653031533978, guid: fc242cdac63a0f145ab5851993432e7b, type: 3}

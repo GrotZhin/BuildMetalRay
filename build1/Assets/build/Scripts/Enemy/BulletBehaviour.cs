@@ -4,7 +4,7 @@ using UnityEngine;
 namespace MetalRay{
 public class BulletBehaviour : MonoBehaviour
 {
-    public int speed;
+    public float speed;
     public int damage = 50;
     public GameObject hitFX;
      public Rigidbody rb;

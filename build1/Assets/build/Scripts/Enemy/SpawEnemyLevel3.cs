@@ -31,7 +31,7 @@ namespace MetalRay
              if (boss == true)
             {   
                 
-               bossInScreen = Instantiate(Boss, spawn.transform);
+//               bossInScreen = Instantiate(Boss, spawn.transform);
                 
                 boss = false;
                 

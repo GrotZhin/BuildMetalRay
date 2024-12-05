@@ -8,7 +8,7 @@ namespace MetalRay
 {
     public class enemyShoot : MonoBehaviour
     {
-        [SerializeField]public static float speed = 3f;
+        public static float speed = 1.5f;
         public Rigidbody rb;
         public int damage;
         float time = 0f;

@@ -186,8 +186,8 @@ MonoBehaviour:
   firePoint: {fileID: 7534480520262088495}
   firePoint1: {fileID: 0}
   shootPrefab: {fileID: 4096486653031533978, guid: 5e83c8c629a1e894fbcb41b3e6e0e5c6, type: 3}
-  fireTime: 0
-  fireRate: 0.75
+  fireTime: 1
+  fireRate: 3
 --- !u!114 &5866282498572999252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1370a9ea1d2480e49b10e4702a3a1096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 1.5
+  spd: 1
 --- !u!65 &6278191903025119355
 BoxCollider:
   m_ObjectHideFlags: 0

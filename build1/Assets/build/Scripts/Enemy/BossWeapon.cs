@@ -11,7 +11,9 @@ namespace MetalRay
     {
         public Transform firePoint;
         
-        public GameObject shootPrefab;
+        public GameObject[] shootPrefabs;
+         GameObject shootPrefab;
+         int i;
         public float fireTime;
         public static bool shootOn;
        
@@ -23,7 +25,7 @@ namespace MetalRay
         }
         void Update()
         {
-            if (shootOn == true){
+           
             fireTime += Time.deltaTime;
             if (fireTime >= fireRate)
             {
@@ -32,12 +34,27 @@ namespace MetalRay
                 fireTime = 0f;
             }
 
-        }
+        
         }
         void EnemyShoot()
         {
-            
-            Instantiate(shootPrefab, firePoint.position, transform.rotation);
+            int percent = Random.Range(0, 100);
+            if (percent <= 100 && percent > 70)
+            {
+                i = 0;
+            }else if (percent <= 70 && percent > 40)
+            {
+              i = 1;
+            }
+            else if (percent <= 40 && percent >20 )
+            {
+                i = 2;
+            }
+            //else if (percent <= 20 && percent > 0)
+           // {
+            //    shootPrefab = shootPrefabs[3];
+            //}
+            Instantiate(shootPrefabs[i], firePoint.position, transform.rotation);
 
         }
         void OnTriggerEnter(Collider other)

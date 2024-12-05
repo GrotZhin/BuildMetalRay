@@ -27,7 +27,7 @@ namespace MetalRay
             {
                 SceneManager.LoadScene("GameCheat");
             }
-            if (gameMenu.activeSelf == false && (scene.name == ("level1") || scene.name == ("level2")) && Input.GetKeyDown(KeyCode.Escape))
+            if (gameMenu.activeSelf == false && (scene.name == ("level1") || scene.name == ("level2") || scene.name == ("level3")) && Input.GetKeyDown(KeyCode.Escape))
             {
                 Time.timeScale = 0;
                 gameMenu.SetActive(true);
@@ -37,7 +37,7 @@ namespace MetalRay
                 optionMenu.SetActive(false);
                 gameMenu.SetActive(true);
             }
-            else if (gameMenu.activeSelf == true && (scene.name == ("level1") || scene.name == ("level2")) && Input.GetKeyDown(KeyCode.Escape))
+            else if (gameMenu.activeSelf == true && (scene.name == ("level1") || scene.name == ("level2") || scene.name == ("level3")) && Input.GetKeyDown(KeyCode.Escape))
             {
                 Time.timeScale = 1;
                 gameMenu.SetActive(false);
@@ -94,6 +94,11 @@ namespace MetalRay
                 gameMenu.SetActive(true);
             } 
             else if(scene.name == ("level2"))
+            {
+                optionMenu.SetActive(false);
+                gameMenu.SetActive(true);
+            } 
+            else if(scene.name == ("level3"))
             {
                 optionMenu.SetActive(false);
                 gameMenu.SetActive(true);

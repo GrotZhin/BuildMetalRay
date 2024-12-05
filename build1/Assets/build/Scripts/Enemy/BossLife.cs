@@ -11,8 +11,8 @@ namespace MetalRay
 {
     public class BossLife : MonoBehaviour
     {
-        public int life;
-        public int maxLife;
+        [SerializeField]float life;
+        public float maxLife;
 
         public UnityEngine.UI.Image fillBar;
         public UnityEngine.UI.Image halfBar;
@@ -30,7 +30,7 @@ namespace MetalRay
         {
             life = maxLife;
 
-            scene = SceneManager.GetActiveScene();
+            
         }
 
         bool flashonoff = true;
@@ -38,9 +38,9 @@ namespace MetalRay
 
         public void TakeDamage(int damage)
         {
-            scene = SceneManager.GetActiveScene();
+           
             life -= damage;
-            FlashEffect();
+           // FlashEffect();
             if (life <= 0)
             {
                 WinCondition.i = 3;
@@ -84,7 +84,7 @@ namespace MetalRay
 
         }
 
-        void FlashEffect()
+       /* void FlashEffect()
         {
 
             InvokeRepeating("Flash", 0f, 0.02f);
@@ -116,6 +116,6 @@ namespace MetalRay
             }
 
 
-        }
+        }*/
     }
 }

@@ -23,14 +23,6 @@ namespace MetalRay
             soundManager.PlaySound(SoundType.DISCO);
            
         }
-        void Updtade(){
-            timer -= Time.deltaTime;
-            Debug.Log(timer);
-            if (timer == 0)
-            {
-       //         Instantiate(firePoint,transform.position, Quaternion.);
-            }
-        }
        
         
         void OnTriggerEnter(Collider hitInfo){
@@ -40,7 +32,7 @@ namespace MetalRay
 
               }
 
-           Instantiate(impactEfect, transform.position, transform.rotation);
+         
            Destroy(gameObject);
         }
    

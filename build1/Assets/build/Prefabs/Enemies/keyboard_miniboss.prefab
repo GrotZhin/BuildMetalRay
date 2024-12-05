@@ -174,6 +174,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aa73d2e12d6f90a40ba91956eaffb4ee, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2859912111639499275}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aa73d2e12d6f90a40ba91956eaffb4ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 181860963831193628}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aa73d2e12d6f90a40ba91956eaffb4ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3964220445717332457}
   m_SourcePrefab: {fileID: 100100000, guid: aa73d2e12d6f90a40ba91956eaffb4ee, type: 3}
 --- !u!4 &6985418258393267200 stripped
 Transform:
@@ -282,7 +288,6 @@ MonoBehaviour:
   spd: 2
   move: 0
   reference: {fileID: 8056868220840853849, guid: dc269ad1204ea9949baaaae54b708eee, type: 3}
-  down: 0
 --- !u!114 &2859912111639499275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,3 +305,37 @@ MonoBehaviour:
   vfxhit: {fileID: 5165246255472843786, guid: 80d56ecff5b950147b3c9615098b99f3, type: 3}
   model: {fileID: 0}
   flashEffect: {fileID: 0}
+--- !u!114 &181860963831193628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7762763515382638266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb3ed2dfb4d93b4da63747d49ca93ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 0}
+  firePoint1: {fileID: 0}
+  shootPrefab: {fileID: 0}
+  fireTime: 0
+  fireRate: 0
+--- !u!114 &3964220445717332457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7762763515382638266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb3ed2dfb4d93b4da63747d49ca93ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 0}
+  firePoint1: {fileID: 0}
+  shootPrefab: {fileID: 0}
+  fireTime: 0
+  fireRate: 0

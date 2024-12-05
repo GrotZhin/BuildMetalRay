@@ -11,7 +11,7 @@ namespace MetalRay
 {
     public class SubBossLife : MonoBehaviour
     {
-        public int life = 2000;
+        public int life;
 
         public GameObject deathEffect;
 

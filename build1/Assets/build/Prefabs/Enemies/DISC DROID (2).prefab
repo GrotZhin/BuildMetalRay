@@ -277,9 +277,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUp:
-  - {fileID: 5306928425731695786, guid: 7034a5886b2ed3e4b99656c77ddf3039, type: 3}
+  - {fileID: 2923852724194722889, guid: 2c04da166ec81654ab7a4aa196cda38c, type: 3}
+  - {fileID: 3119677975701721125, guid: 41baa3ba6d7842d43a4427ccb5c2f319, type: 3}
+  - {fileID: 8709931381132379278, guid: c6ed320ce90c2e8449e4c3b88b109101, type: 3}
   - {fileID: 1037112439936919201, guid: 5be5eb014f8cf7549bce2c1b3a9b1b96, type: 3}
-  dropChance: 0
+  - {fileID: 7165834762841451026, guid: 17800fff7cfb3654d83ab547f5b14970, type: 3}
+  dropChance: 30
 --- !u!4 &827453023948160695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cf88f5eddc36c4048b98d700cf0a62e1, type: 3}

@@ -43,6 +43,18 @@ namespace MetalRay
                     i = 0;
                  }
             }
+            else if (scene.name == ("level3") && i ==3)
+            {
+                Retry.i = 3;
+                time += Time.deltaTime;
+                if(time >= 5f)
+                {
+                    SceneManager.LoadScene("win1");
+                    time= 0;    
+                    i = 0;
+                }
+
+            }
         }
     }
 }

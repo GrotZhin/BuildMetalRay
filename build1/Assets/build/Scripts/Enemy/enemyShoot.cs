@@ -11,7 +11,6 @@ namespace MetalRay
         [SerializeField]public static float speed = 3f;
         public Rigidbody rb;
         public int damage;
-        public GameObject impactEfect;
         float time = 0f;
 
         
@@ -33,7 +32,7 @@ namespace MetalRay
             
               }
 
-           Instantiate(impactEfect, transform.position, transform.rotation);
+         
            Destroy(gameObject);
         }
    

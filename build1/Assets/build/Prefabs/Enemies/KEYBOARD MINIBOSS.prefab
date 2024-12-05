@@ -123,6 +123,8 @@ PrefabInstance:
     - {fileID: -2664552997027637137, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
     - {fileID: -8823706844806959977, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
     - {fileID: 2859912111639499275, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+    - {fileID: 181860963831193628, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+    - {fileID: 3964220445717332457, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8444243316490322675, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
     - {fileID: 6288786647211637433, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
@@ -147,10 +149,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4013207324579495343}
     m_Modifications:
+    - target: {fileID: 181860963831193628, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 181860963831193628, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 6912064141959330402}
+    - target: {fileID: 181860963831193628, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+      propertyPath: shootPrefab
+      value: 
+      objectReference: {fileID: 4096486653031533978, guid: 5e83c8c629a1e894fbcb41b3e6e0e5c6, type: 3}
     - target: {fileID: 2859912111639499275, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
       propertyPath: flashEffect
       value: 
       objectReference: {fileID: 8022153234241148717}
+    - target: {fileID: 3964220445717332457, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964220445717332457, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 6088172214441160580}
+    - target: {fileID: 3964220445717332457, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+      propertyPath: shootPrefab
+      value: 
+      objectReference: {fileID: 4096486653031533978, guid: 5e83c8c629a1e894fbcb41b3e6e0e5c6, type: 3}
     - target: {fileID: 6985418258393267200, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -195,7 +221,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: keyboard_miniboss
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5751118075257503341, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+    - {fileID: 4801837965636162880, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6985418258393267200, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
@@ -203,6 +231,16 @@ PrefabInstance:
       addedObject: {fileID: 7214689025704168855}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+--- !u!4 &6088172214441160580 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5238924596510113341, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+  m_PrefabInstance: {fileID: 2074451296120836537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6912064141959330402 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4838409446341405659, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}
+  m_PrefabInstance: {fileID: 2074451296120836537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8951148985732525497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6985418258393267200, guid: 31320e27bb04e244096e018c14d7ede6, type: 3}

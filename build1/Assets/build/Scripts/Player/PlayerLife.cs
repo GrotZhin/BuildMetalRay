@@ -30,6 +30,7 @@ namespace MetalRay
 
         [SerializeField] private GameObject flashEffect ;
         [SerializeField] private GameObject Sakihit ;
+        [SerializeField] private GameObject Sakideath ;
         public float hitcamtimer;
         public float hitcamdur;
 
@@ -160,6 +161,7 @@ namespace MetalRay
             halfBar.fillAmount = 0;
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(vfxdeath, transform.position, Quaternion.identity);
+            Sakideath.SetActive(true);
             Destroy(model.gameObject);
         }
 

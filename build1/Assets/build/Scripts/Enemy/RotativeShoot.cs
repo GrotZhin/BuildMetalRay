@@ -10,16 +10,18 @@ namespace MetalRay
 
         public float bltlife = 1f;
         public int damage = 10;
-        public float spd= 15f;
+        public float spd;
         public float Rotation = 0f;
         public GameObject impactEfect;
-     
-        public Vector2 Spawnpoint;
+        
+         public Vector2 Spawnpoint;
+        
         
         public float timer= 0f;
         void Start()
         {
          Spawnpoint = new Vector2(transform.position.x,transform.position.y );
+        
         }
 
         // Update is called once per frame

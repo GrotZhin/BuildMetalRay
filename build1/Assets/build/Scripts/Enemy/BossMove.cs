@@ -33,24 +33,6 @@ public class BossMove : MonoBehaviour
         timer += Time.deltaTime;
 
 
-        if (move == true && down == false)
-        {
-            pos.x -= spd * Time.deltaTime;
-            if (pos.x <= min)
-            {
-                move = false;
-
-            }
-
-        }
-        else if (move == false && down == false)
-        {
-            pos.x += spd * Time.deltaTime;
-            if (pos.x >= max)
-            {
-                move = true;
-            }
-        }
 
         if (timer >= interval)
         {

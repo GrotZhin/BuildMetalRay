@@ -10,13 +10,17 @@ namespace MetalRay
         public float bltlife = 1f;
         public float spd = 15f;
         public float fireRate = 0.75f;
+        public bool left;
 
         private GameObject spawnedRotShoot;
         public float timer = 0f;
 
         void Start()
         {
-        
+            if(left == true)
+            {
+                spd *= -1;
+            }
         }
 
         // Update is called once per frame

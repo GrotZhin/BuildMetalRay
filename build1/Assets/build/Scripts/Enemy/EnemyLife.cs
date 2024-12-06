@@ -90,8 +90,8 @@ namespace MetalRay
         {
             soundManager.PlaySound(SoundType.ENEMYBOOM);
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Instantiate(vfxhit, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+  
+            Destroy(gameObject);         
 
         }
     }

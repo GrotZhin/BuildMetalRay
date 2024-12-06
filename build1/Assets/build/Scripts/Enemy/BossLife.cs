@@ -54,15 +54,11 @@ namespace MetalRay
         }
         void Update()
         {
-            if (fillBar.fillAmount <= 0.5)
-            {
-                lifeBar.SetActive(false);
-            }
-            else if (fillBar.fillAmount >= 0.5)
-            {
-                lifeBar.SetActive(true);
-            }
 
+         if (Input.GetKeyDown(KeyCode.K))
+         {
+            life = 0;
+         }
             LifeBar();
         }
         public void LifeBar()

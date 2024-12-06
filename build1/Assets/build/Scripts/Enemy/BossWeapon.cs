@@ -9,14 +9,15 @@ namespace MetalRay
 {
     public class BossWeapon : MonoBehaviour
     {
-        public Transform firePoint;
-        
+        public Transform[] firePoint;
+
         public GameObject[] shootPrefabs;
-         GameObject shootPrefab;
-         int i;
+        GameObject shootPrefab;
+        GameObject turret;
+        int i;
         public float fireTime;
         public static bool shootOn;
-       
+
         public float fireRate;
 
         void Start()
@@ -25,7 +26,7 @@ namespace MetalRay
         }
         void Update()
         {
-           
+
             fireTime += Time.deltaTime;
             if (fireTime >= fireRate)
             {
@@ -34,28 +35,43 @@ namespace MetalRay
                 fireTime = 0f;
             }
 
-        
+
         }
         void EnemyShoot()
         {
             int percent = Random.Range(0, 100);
             if (percent <= 100 && percent > 70)
             {
-                i = 0;
-            }else if (percent <= 70 && percent > 40)
-            {
-              i = 1;
-            }
-            else if (percent <= 40 && percent >20 )
-            {
-                i = 2;
-            }
-            //else if (percent <= 20 && percent > 0)
-           // {
-            //    shootPrefab = shootPrefabs[3];
-            //}
-            Instantiate(shootPrefabs[i], firePoint.position, transform.rotation);
 
+                Instantiate(shootPrefabs[0], firePoint[1].position, transform.rotation);
+                Instantiate(shootPrefabs[0], firePoint[0].position, transform.rotation);
+
+            }
+            else if (percent <= 70 && percent > 40)
+            {
+                for (int i = 0; i <= 7; i++)
+                {
+                 
+                 Instantiate(shootPrefabs[1], firePoint[i].position, transform.rotation);
+                }
+                
+            }
+            else if (percent <= 40 && percent > 20)
+            {
+                Instantiate(shootPrefabs[2], firePoint[1].position, transform.rotation);
+
+                Instantiate(shootPrefabs[2], firePoint[0].position, transform.rotation);
+                
+            }
+            else if (percent <= 20 && percent > 0)
+            {
+                if (turret == null)
+                {
+                    turret = Instantiate(shootPrefabs[3], firePoint[8].position, transform.rotation);
+
+                }
+            }
+           
         }
         void OnTriggerEnter(Collider other)
         {

@@ -409,6 +409,7 @@
 "Assets/build/Scripts/powerUps/Life.cs"
 "Assets/build/Scripts/powerUps/PowerUpControl.cs"
 "Assets/build/Scripts/powerUps/ReverbPowerUp.cs"
+"Assets/build/Scripts/soundManangers/SongControl.cs"
 "Assets/build/Scripts/soundManangers/soundManager.cs"
 "Assets/build/Scripts/soundManangers/volumeSettings.cs"
 -langversion:9.0

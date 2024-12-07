@@ -11,6 +11,8 @@ namespace MetalRay
     {
         public Transform[] firePoint;
 
+        public Animator animator;
+
         public GameObject[] shootPrefabs;
         GameObject shootPrefab;
         GameObject turret;

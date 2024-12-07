@@ -225,6 +225,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 135164033941497747, guid: ed60368b616a08640ac6c33364dd4628, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 04a89130fea6b084092a0333e1eca88b, type: 2}
     - target: {fileID: 919132149155446097, guid: ed60368b616a08640ac6c33364dd4628, type: 3}
       propertyPath: m_Name
       value: BOOM TURRET (1)
@@ -407,6 +411,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 135164033941497747, guid: ed60368b616a08640ac6c33364dd4628, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 04a89130fea6b084092a0333e1eca88b, type: 2}
     - target: {fileID: 919132149155446097, guid: ed60368b616a08640ac6c33364dd4628, type: 3}
       propertyPath: m_Name
       value: BOOM TURRET (2)

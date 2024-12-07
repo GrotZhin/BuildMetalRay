@@ -168,4 +168,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperLimit: 5
   lowerLimit: 3
-  bulletPrefab: {fileID: 4096486653031533978, guid: fc242cdac63a0f145ab5851993432e7b, type: 3}
+  bulletPrefab: {fileID: 4096486653031533978, guid: 25c5bc6a9432b2a409b4762638813366, type: 3}

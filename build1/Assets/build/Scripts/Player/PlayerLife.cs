@@ -216,7 +216,7 @@ namespace MetalRay
           
           if (hitcamtimer >= hitcamdur)
           {
-            Debug.Log("qaaaaaaaaahhhhhhhh");
+           
             Sakihit.SetActive(false);
             hitbool = false;
             hitcamtimer = 0;

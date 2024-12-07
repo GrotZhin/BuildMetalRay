@@ -49,7 +49,7 @@ namespace MetalRay
 
         public void Play()
         {
-            SceneManager.LoadScene("level1");
+            SceneManager.LoadScene("cutscene");
             
         }
         

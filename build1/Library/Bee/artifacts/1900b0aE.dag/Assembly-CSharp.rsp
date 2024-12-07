@@ -395,6 +395,7 @@
 "Assets/build/Scripts/InGame/Score.cs"
 "Assets/build/Scripts/InGame/UISpriteAnimation.cs"
 "Assets/build/Scripts/InGame/WinCondition.cs"
+"Assets/build/Scripts/Menu/cutscene.cs"
 "Assets/build/Scripts/Menu/introTransition.cs"
 "Assets/build/Scripts/Menu/menuManager.cs"
 "Assets/build/Scripts/Player/Controle.cs"

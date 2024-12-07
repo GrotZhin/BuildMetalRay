@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: f4f22d20f60a1934582d499dbcecf355, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -5159,11 +5159,14 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: 95ceaf350f87d444ab1e0145929d90fb, type: 3}
   - name: CHORUS
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 09d53a38b4172d6418c83969059092de, type: 3}
   - name: REVERB
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: f542581cfebabe047b5a0f39e4e383aa, type: 3}
   - name: DELAY
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 15ec86c386b374c4bbb44257a5116de6, type: 3}
   - name: HEAL
     sounds: []
   musicSource: {fileID: 91252252}

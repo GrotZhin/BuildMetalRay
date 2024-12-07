@@ -73,6 +73,11 @@ namespace MetalRay
                 {
                     Retry.i =2;
                 }
+                else if(scene.name == ("level3"))
+                {
+                    Retry.i =3;
+                }
+
                
             }
 

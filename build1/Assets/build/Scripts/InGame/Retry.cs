@@ -27,7 +27,15 @@ namespace MetalRay
                 Score.scoreValue = 0;
                 Score.killCounterValue = 0;
                 SceneManager.LoadScene("level2");
+            } else if (i == 3)
+            {
+
+                Score.counter = 0;
+                Score.scoreValue = 0;
+                Score.killCounterValue = 0;
+                SceneManager.LoadScene("level3");
             }
+
 
         }
     }

@@ -786,7 +786,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType:
-  - {fileID: 13621337154184205, guid: c80e247b778fe8d46bb8b453413048f3, type: 3}
+  - {fileID: 283939708363302037, guid: 13a0c4142bacc824684b55c1e96c9ae5, type: 3}
+  - {fileID: 283939708363302037, guid: 821b15a33ec80064281af82a2f6a2f19, type: 3}
+  - {fileID: 283939708363302037, guid: 420ef5f969a41594698a9b8bb3659620, type: 3}
+  - {fileID: 283939708363302037, guid: 67f9f8e10349eef4e848554886cdf35d, type: 3}
+  - {fileID: 283939708363302037, guid: f9b7de28befef0142a2aff990188a9db, type: 3}
+  - {fileID: 283939708363302037, guid: 20de7869a98dca548bd6113b07d156ed, type: 3}
+  - {fileID: 283939708363302037, guid: 5c60500fe8597b348aac05d8ab4a28da, type: 3}
+  - {fileID: 283939708363302037, guid: e3ea4ebf8944c044d9dbb3c27cc5157b, type: 3}
+  - {fileID: 3030471404616492717, guid: f1d61c2f133a45a4aa594856f1d8a2b9, type: 3}
+  - {fileID: 3030471404616492717, guid: 337161a2d5b3c2749a401fcdc1144371, type: 3}
+  - {fileID: 3030471404616492717, guid: 1731b0dfc3ade864781723ada1629e4e, type: 3}
+  - {fileID: 3030471404616492717, guid: 2588a2c582e637c49b03aef16c2f9d0d, type: 3}
+  - {fileID: 3030471404616492717, guid: 64b543b7570d335478f91216bc0ddcc7, type: 3}
+  - {fileID: 7516247692285237413, guid: 83316023cdb65de428d2f4dcef9da2da, type: 3}
+  - {fileID: 283939708363302037, guid: d2aaa44100927d04ca7944241439f54c, type: 3}
   Boss: {fileID: 0}
   spawn: {fileID: 336342787}
 --- !u!1 &382172531
@@ -1058,6 +1072,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5187345974892777467, guid: 37dab78c2da7fc344b628c3a76e9f48f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5254995450476823278, guid: 37dab78c2da7fc344b628c3a76e9f48f, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1070,6 +1088,10 @@ PrefabInstance:
       propertyPath: fillBar
       value: 
       objectReference: {fileID: 382172534}
+    - target: {fileID: 5601888554566408373, guid: 37dab78c2da7fc344b628c3a76e9f48f, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 3308732416233299549, guid: 8b4dfd9937c53e94eba7816ba355b53b, type: 3}
     - target: {fileID: 6065497752971872268, guid: 37dab78c2da7fc344b628c3a76e9f48f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -7487,7 +7509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401534860271696795, guid: 0d428edb99f5a1d45b3f6ba6d6dd15b2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6782017250189909440, guid: 0d428edb99f5a1d45b3f6ba6d6dd15b2, type: 3}
       propertyPath: m_LocalPosition.z

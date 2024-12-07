@@ -74,7 +74,7 @@ namespace MetalRay
         public void Die()
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Instantiate(vfxhit, transform.position, Quaternion.identity);
+          //  Instantiate(vfxhit, transform.position, Quaternion.identity);
             SpawnEnemyLevel2.bossInScreen = null;
             Destroy(gameObject);
 

@@ -12,6 +12,7 @@ namespace MetalRay
         public Transform[] firePoint;
 
         public Animator animator;
+        public Animator flashanimator;
 
         public GameObject[] shootPrefabs;
         GameObject shootPrefab;
@@ -19,6 +20,8 @@ namespace MetalRay
         int i;
         public float fireTime;
         public static bool shootOn;
+
+
 
         public float fireRate;
 
@@ -44,35 +47,24 @@ namespace MetalRay
             int percent = Random.Range(0, 100);
             if (percent <= 100 && percent > 70)
             {
+                 Attack1();
 
-                Instantiate(shootPrefabs[0], firePoint[1].position, transform.rotation);
-                Instantiate(shootPrefabs[0], firePoint[0].position, transform.rotation);
 
             }
-            else if (percent <= 70 && percent > 40)
+             else if (percent <= 70 && percent > 40)
             {
-                for (int i = 0; i <= 7; i++)
-                {
-                 
-                 Instantiate(shootPrefabs[1], firePoint[i].position, transform.rotation);
-                }
+                Attack2();
                 
             }
             else if (percent <= 40 && percent > 20)
             {
-                Instantiate(shootPrefabs[2], firePoint[1].position, transform.rotation);
-
-                Instantiate(shootPrefabs[2], firePoint[0].position, transform.rotation);
-                
+                Attack3();
             }
             else if (percent <= 20 && percent > 0)
             {
-                if (turret == null)
-                {
-                    turret = Instantiate(shootPrefabs[3], firePoint[8].position, transform.rotation);
-
-                }
+               Turret();
             }
+           
            
         }
         void OnTriggerEnter(Collider other)
@@ -86,6 +78,42 @@ namespace MetalRay
         public void ShootOn()
         {
             enabled = true;
+        }
+
+        public void Attack1(){
+
+            animator.Play("attack1");
+            flashanimator.Play("attack1");
+                Instantiate(shootPrefabs[0], firePoint[1].position, transform.rotation);
+                Instantiate(shootPrefabs[0], firePoint[0].position, transform.rotation);
+        }
+        public void Attack2(){
+            animator.Play("attack2");
+            flashanimator.Play("attack2");
+            for (int i = 0; i <= 7; i++)
+                {
+                 
+                 Instantiate(shootPrefabs[1], firePoint[i].position, transform.rotation);
+                }
+        }
+
+        public void Attack3(){
+             animator.Play("attack3");
+             flashanimator.Play("attack3");
+             Instantiate(shootPrefabs[2], firePoint[1].position, transform.rotation);
+
+                Instantiate(shootPrefabs[2], firePoint[0].position, transform.rotation);
+        }
+        public void Turret(){
+
+          
+
+               if (turret == null)
+                {
+                    turret = Instantiate(shootPrefabs[3], firePoint[8].position, transform.rotation);
+                    
+                }
+
         }
 
     }

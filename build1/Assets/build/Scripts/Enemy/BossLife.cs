@@ -12,6 +12,7 @@ namespace MetalRay
     public class BossLife : MonoBehaviour
     {
         [SerializeField]float life;
+        
         public float maxLife;
 
         public UnityEngine.UI.Image fillBar;
@@ -40,7 +41,7 @@ namespace MetalRay
         {
            
             life -= damage;
-           // FlashEffect();
+            FlashEffect();
             if (life <= 0)
             {
                 WinCondition.i = 3;
@@ -80,7 +81,7 @@ namespace MetalRay
 
         }
 
-       /* void FlashEffect()
+       void FlashEffect()
         {
 
             InvokeRepeating("Flash", 0f, 0.02f);
@@ -111,7 +112,6 @@ namespace MetalRay
 
             }
 
-
-        }*/
+        }
     }
 }

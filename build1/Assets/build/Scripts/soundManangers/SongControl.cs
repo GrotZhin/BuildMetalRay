@@ -9,7 +9,7 @@ namespace MetalRay
     public class SongControl : MonoBehaviour
     {
         public AudioSource[] songsLoop;
-        public AudioSource[] song;
+        public AudioSource song;
 
         float time;
         bool toggle;
@@ -22,14 +22,8 @@ namespace MetalRay
         // Update is called once per frame
         void Update()
         {
-            time += Time.deltaTime;
-            if(time >= 5)
-            {
-                Stop();
-            }
-
-
-            if (song[song.Length - 1].isPlaying == false && toggle == true)
+          
+            if (song.isPlaying == false && toggle == true)
             {
                 Loop();
                 toggle = false;
@@ -45,10 +39,9 @@ namespace MetalRay
         }
         public void Stop()
         {
-            for (int i = 0; i < song.Length; i++)
-            {
-                song[i].Pause();
-            }
+           
+                song.Pause();
+            
         }
     }
 }

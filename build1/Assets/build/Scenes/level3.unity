@@ -675,7 +675,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 876644456}
   m_Father: {fileID: 1223816802}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &243642914
@@ -2353,7 +2354,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1223816802}
+  m_Father: {fileID: 223884021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &876644457
 AudioSource:
@@ -2365,7 +2366,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2480714670801872785, guid: 2c113b1e4534d0f4b9da8f62a9339460, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 68e9b8c8185c4424fbc1e39069e9cd0e, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3766,7 +3767,6 @@ Transform:
   - {fileID: 1888365820}
   - {fileID: 1984401249}
   - {fileID: 223884021}
-  - {fileID: 876644456}
   - {fileID: 397574094}
   m_Father: {fileID: 1840379554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

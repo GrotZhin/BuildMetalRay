@@ -16,7 +16,7 @@ namespace MetalRay
 
         public UnityEngine.UI.Image fillBar;
         public UnityEngine.UI.Image halfBar;
-        public GameObject lifeBar;
+    
 
         public GameObject deathEffect;
 
@@ -66,7 +66,7 @@ namespace MetalRay
 
             {
                 fillBar.fillAmount = life / maxLife;
-                halfBar.fillAmount = life / maxLife;
+               
 
             }
         }

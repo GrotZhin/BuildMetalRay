@@ -10,7 +10,10 @@ namespace MetalRay
     {
         Scene scene;
         public static int i = 0;
+        
+         public static int chances = 3;
         float time = 0;
+        float killtimer = 0;
         void Start()
         {
           scene = SceneManager.GetActiveScene();
@@ -19,6 +22,16 @@ namespace MetalRay
         // Update is called once per frame
         void Update()
         {
+           /*  if (PlayerLife.die == true)
+            {
+                killtimer += Time.deltaTime;
+                Debug.Log(killtimer);
+            }
+            if (killtimer >= 2)
+            {
+                SceneManager.LoadScene("lose");
+                killtimer = 0f;
+            }*/
             if (scene.name == ("level1") && i == 1)
             {
                  Retry.i = 1;

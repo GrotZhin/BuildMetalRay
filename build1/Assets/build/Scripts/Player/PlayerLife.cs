@@ -13,15 +13,18 @@ namespace MetalRay
 {
     public class PlayerLife : MonoBehaviour
     {
-        public float life;
-        float maxLife = 100;
+        public static float life;
+       public float maxLife = 100;
+      
         public int damage = 20;
+
         public UnityEngine.UI.Image fillBar;
         public UnityEngine.UI.Image halfBar;
         public GameObject lifeBar;
         public GameObject model;
         public GameObject hitSprite;
-        public new CapsuleCollider collider;
+        public Transform respawn;
+       
         public GameObject deathEffect;
 
          public ParticleSystem vfxdeath;
@@ -40,8 +43,8 @@ namespace MetalRay
         public TextMeshProUGUI textoVida;
 
         float killtimer = 0f;
-        bool die;
-        bool ignore;
+        public static bool die;
+       public static bool ignore;
 
         Scene scene;
 
@@ -107,6 +110,12 @@ namespace MetalRay
 
                 TakeDamage(damage);
             }
+            BossLife BossLife = hitInfo.collider.GetComponent<BossLife>();
+            if (BossLife != null)
+            {
+
+                TakeDamage(damage);
+            }
 
         }
         void Update()
@@ -123,16 +132,7 @@ namespace MetalRay
             }
             }
            
-            if (die == true)
-            {
-                killtimer += Time.deltaTime;
-                Debug.Log(killtimer);
-            }
-            if (killtimer >= 2)
-            {
-                SceneManager.LoadScene("lose");
-                killtimer = 0f;
-            }
+           
             
 
             if (fillBar.fillAmount <= 0.5)
@@ -163,13 +163,20 @@ namespace MetalRay
         void Die()
         {
             die = true;
+            WinCondition.chances -= 1;
             halfBar.fillAmount = 0;
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(vfxdeath, transform.position, Quaternion.identity);
             Sakideath.SetActive(true);
-            Destroy(model.gameObject);
+            Respawn();
+            
+            Destroy(gameObject);
         }
-
+        void Respawn()
+        {
+            Instantiate(this.gameObject, respawn.position, Quaternion.identity);
+            Sakideath.SetActive(false);
+        }
         void FlashEffect()
         {
 

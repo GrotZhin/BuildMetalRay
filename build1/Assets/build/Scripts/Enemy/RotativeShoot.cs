@@ -21,7 +21,7 @@ namespace MetalRay
         void Start()
         {
          Spawnpoint = new Vector2(transform.position.x,transform.position.y );
-        
+         
         }
 
         // Update is called once per frame

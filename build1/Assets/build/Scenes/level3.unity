@@ -6264,6 +6264,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundList:
+  - name: LAUCHPAD
+    sounds:
+    - {fileID: 8300000, guid: e33a25819218c5041837a5e26d4ad0dd, type: 3}
   - name: OTOMATOME
     sounds:
     - {fileID: 8300000, guid: 98ebd67365d1a584996eb2950ec9f00a, type: 3}
@@ -6289,8 +6292,19 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: 15ec86c386b374c4bbb44257a5116de6, type: 3}
   - name: HEAL
+    sounds: []
+  - name: DISCOTROW
     sounds:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 875940c5b00b57e41a60f9c7e8699766, type: 3}
+  - name: ROTATIVE
+    sounds:
+    - {fileID: 8300000, guid: ac8762e017c714a4da58ad6a6385a2a3, type: 3}
+  - name: BOSSEXPLOSION1
+    sounds:
+    - {fileID: 8300000, guid: 1b03c5d4dc6f7874da94eee10a6a69f0, type: 3}
+  - name: BOSSEXPLOSION2
+    sounds:
+    - {fileID: 8300000, guid: 10b8e02a0a0b7274b8cee4cd45674f44, type: 3}
   musicSource: {fileID: 91252252}
 --- !u!114 &1840379556
 MonoBehaviour:

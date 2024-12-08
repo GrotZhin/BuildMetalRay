@@ -12,6 +12,7 @@ namespace MetalRay
     public enum SoundType
 
     {
+        LAUCHPAD,
         OTOMATOME,
         DISCO,
         ENEMYBOOM,
@@ -26,6 +27,13 @@ namespace MetalRay
 
         HEAL,
 
+        DISCOTROW,
+
+        ROTATIVE,
+
+        BOSSEXPLOSION1,
+
+        BOSSEXPLOSION2,
 
     }
 

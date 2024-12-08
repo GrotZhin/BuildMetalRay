@@ -5143,6 +5143,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundList:
+  - name: LAUCHPAD
+    sounds:
+    - {fileID: 8300000, guid: e33a25819218c5041837a5e26d4ad0dd, type: 3}
   - name: OTOMATOME
     sounds:
     - {fileID: 8300000, guid: 98ebd67365d1a584996eb2950ec9f00a, type: 3}
@@ -5168,6 +5171,15 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: 15ec86c386b374c4bbb44257a5116de6, type: 3}
   - name: HEAL
+    sounds: []
+  - name: DISCOTROW
+    sounds:
+    - {fileID: 8300000, guid: 875940c5b00b57e41a60f9c7e8699766, type: 3}
+  - name: ROTATIVE
+    sounds: []
+  - name: BOSSEXPLOSION1
+    sounds: []
+  - name: BOSSEXPLOSION2
     sounds: []
   musicSource: {fileID: 91252252}
 --- !u!1 &1863937299 stripped

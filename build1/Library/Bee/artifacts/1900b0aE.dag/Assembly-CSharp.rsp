@@ -374,6 +374,7 @@
 "Assets/build/Scripts/Enemy/BossWeapon.cs"
 "Assets/build/Scripts/Enemy/BulletBehaviour.cs"
 "Assets/build/Scripts/Enemy/DiscoShoot.cs"
+"Assets/build/Scripts/Enemy/discparts shoot.cs"
 "Assets/build/Scripts/Enemy/EnemyLife.cs"
 "Assets/build/Scripts/Enemy/enemyRotativeWeapon.cs"
 "Assets/build/Scripts/Enemy/enemyShoot.cs"

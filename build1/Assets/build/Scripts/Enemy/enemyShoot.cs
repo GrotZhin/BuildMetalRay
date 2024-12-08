@@ -13,13 +13,11 @@ namespace MetalRay
         public int damage;
         float time = 0f;
 
-        
-        
 
       
         void Start(){
             rb.velocity = (-1* transform.up) * speed;
-            soundManager.PlaySound(SoundType.OTOMATOME);
+            soundManager.PlaySound(SoundType.LAUCHPAD);
             
         }
       

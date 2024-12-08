@@ -38,6 +38,7 @@ namespace MetalRay
          {
             if(RotativeShoot)
             {
+                soundManager.PlaySound(SoundType.ROTATIVE);
                 spawnedRotShoot = Instantiate(RotativeShoot,transform.position,Quaternion.identity); 
                 spawnedRotShoot.GetComponent<RotativeShoot>().spd = spd;
                 spawnedRotShoot.GetComponent<RotativeShoot>().bltlife = bltlife;

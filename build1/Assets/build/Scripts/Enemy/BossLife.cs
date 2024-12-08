@@ -79,6 +79,8 @@ namespace MetalRay
            Instantiate(deathEffect, transform.position, Quaternion.identity);
            Instantiate(vfxdeath1, transform.position, Quaternion.identity);
            Instantiate(vfxdeath2, transform.position, Quaternion.identity);
+           soundManager.PlaySound(SoundType.BOSSEXPLOSION1);
+           soundManager.PlaySound(SoundType.BOSSEXPLOSION2);
             SpawnEnemyLevel2.bossInScreen = null;
             
             Destroy(gameObject);

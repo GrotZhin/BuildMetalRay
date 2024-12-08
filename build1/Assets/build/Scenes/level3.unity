@@ -7664,6 +7664,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 382172534}
     - target: {fileID: 7090521213779717237, guid: f5627e16e5576b44aa764832f15f4840, type: 3}
+      propertyPath: vfxdeath1
+      value: 
+      objectReference: {fileID: 5479206747836332114, guid: 030bfb82ea41ecb4c92fffff514cf0a7, type: 3}
+    - target: {fileID: 7090521213779717237, guid: f5627e16e5576b44aa764832f15f4840, type: 3}
+      propertyPath: vfxdeath2
+      value: 
+      objectReference: {fileID: 1470910182122251071, guid: 4f0a40e8d368fd24eb1e811c07c3a17a, type: 3}
+    - target: {fileID: 7090521213779717237, guid: f5627e16e5576b44aa764832f15f4840, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1374653247888540556, guid: a8e744aa0df59ff4480235570d1a743e, type: 3}
+    - target: {fileID: 7090521213779717237, guid: f5627e16e5576b44aa764832f15f4840, type: 3}
       propertyPath: flashEffect
       value: 
       objectReference: {fileID: 620057009}

@@ -21,7 +21,9 @@ namespace MetalRay
 
         public GameObject deathEffect;
 
-        public ParticleSystem vfxhit;
+        public ParticleSystem vfxdeath1;
+        public ParticleSystem vfxdeath2;
+        public ParticleSystem vfxdeath3;
         int i = 0;
         Scene scene;
         public GameObject model;
@@ -74,9 +76,11 @@ namespace MetalRay
 
         public void Die()
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-          //  Instantiate(vfxhit, transform.position, Quaternion.identity);
+           Instantiate(deathEffect, transform.position, Quaternion.identity);
+           Instantiate(vfxdeath1, transform.position, Quaternion.identity);
+           Instantiate(vfxdeath2, transform.position, Quaternion.identity);
             SpawnEnemyLevel2.bossInScreen = null;
+            
             Destroy(gameObject);
 
         }
@@ -111,6 +115,7 @@ namespace MetalRay
                 flashstop = 0;
 
             }
+        
 
         }
     }

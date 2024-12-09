@@ -55,7 +55,7 @@ public class subBossMove : MonoBehaviour
         if (timer >= interval)
         {
             porcent = Random.Range(0, 100);
-            Debug.Log(porcent);
+            
             timer = 0;
         }
 

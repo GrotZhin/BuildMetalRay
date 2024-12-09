@@ -37,7 +37,7 @@ public class BossMove : MonoBehaviour
         if (timer >= interval)
         {
             porcent = Random.Range(0, 100);
-            Debug.Log(porcent);
+            
             timer = 0;
         }
         if (down == true)

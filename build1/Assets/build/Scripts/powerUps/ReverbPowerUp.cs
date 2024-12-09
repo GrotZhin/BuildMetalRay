@@ -46,7 +46,7 @@ namespace MetalRay
         void Update()
         {
              if (active == true)
-                Debug.Log(active);
+                
             {
                 time += Time.deltaTime;
 
@@ -54,7 +54,7 @@ namespace MetalRay
                 {
                     enemyShoot.speed = 3;
                     active = false;
-                    Debug.Log(active);
+                    
                     time = 0;
                     Destroy(this.gameObject);
                 }

@@ -50,9 +50,14 @@ namespace MetalRay
         public void Play()
         {
             SceneManager.LoadScene("cutscene");
-            
+
+            Score.counter = 0;
+            Score.scoreValue = 0;
+            Score.killCounterValue = 0;
+            PlayerLife.ignore = true;
+            WinCondition.chances = 3;
         }
-        
+
 
         public void Audio()
         {
@@ -73,13 +78,20 @@ namespace MetalRay
 
         public void Exit()
         {
-            Debug.Log("kitou");
+            
             Application.Quit();
         }
         public void NextLevel()
         {
             Score.killTimer = 0f;
-            SceneManager.LoadScene("level2");
+            if (scene.name == ("level1"))
+            {
+                SceneManager.LoadScene("level2");
+            }
+            else if (scene.name == ("level2"))
+            {
+                SceneManager.LoadScene("level3");
+            }
         }
         public void Back()
         {
@@ -88,22 +100,22 @@ namespace MetalRay
                 mainMenu.SetActive(true);
                 optionMenu.SetActive(false);
             }
-            else if(scene.name == ("level1"))
-            {
-                optionMenu.SetActive(false);
-                gameMenu.SetActive(true);
-            } 
-            else if(scene.name == ("level2"))
-            {
-                optionMenu.SetActive(false);
-                gameMenu.SetActive(true);
-            } 
-            else if(scene.name == ("level3"))
+            else if (scene.name == ("level1"))
             {
                 optionMenu.SetActive(false);
                 gameMenu.SetActive(true);
             }
-           
+            else if (scene.name == ("level2"))
+            {
+                optionMenu.SetActive(false);
+                gameMenu.SetActive(true);
+            }
+            else if (scene.name == ("level3"))
+            {
+                optionMenu.SetActive(false);
+                gameMenu.SetActive(true);
+            }
+
         }
         public void MainMenu()
         {

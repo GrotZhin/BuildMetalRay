@@ -25,7 +25,7 @@ namespace MetalRay
 
             if (other.gameObject.CompareTag("Player"))
             {
-                Weapon.fireRate = 0.1f;
+                Weapon.fireRate = 0f;
                 soundManager.PlaySound(SoundType.DELAY);
                 Destroy(this.gameObject);
                 collider.enabled = false;

@@ -13,9 +13,9 @@ namespace MetalRay
         // Start is called before the first frame update
         void Start()
         {
-            Debug.Log("sssssssssssssssssssssssssss");
+         
             for (int i = 0; i<4;i++){
-            Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa    :"+i);
+            
            
             GameObject a =Instantiate(Orbit,transform.position,Quaternion.identity,this.transform);
 

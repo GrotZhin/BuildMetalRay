@@ -36,7 +36,11 @@ namespace MetalRay
             i += 1;
 
 
-            Debug.Log(i);
+           if (WinCondition.i >=1)
+            {
+                Destroy(this.gameObject);
+            }
+
         }
     }
 

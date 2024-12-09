@@ -10,11 +10,14 @@ namespace MetalRay
     {
         public static int scoreValue = 0;
         public static int killCounterValue = 0;
+        public static int highKillCounterValue = 0;
         public static int counter = 0;
         public static float killTimer = 0;
         public TextMeshProUGUI score;
-        public TextMeshProUGUI killCounter;
         public Image[] phrases;
+        public TextMeshProUGUI killCounter;
+        public TextMeshProUGUI chancesText;
+        public TextMeshProUGUI highKillCounterText;
         public GameObject[] multiplier;
         public Transform reference;
         Image save;
@@ -31,8 +34,9 @@ namespace MetalRay
         {
             score.text = "" + scoreValue;
             killCounter.text = "" + killCounterValue;
-
-
+            highKillCounterText.text = "" + highKillCounterValue;
+            chancesText.text = WinCondition.chances + "x";
+            
             if(killCounterValue < 10)
             {
                 Destroy(save);
@@ -74,6 +78,7 @@ namespace MetalRay
                 Phrases();
                 counter = 0;
             }
+            HighKillStreak();
         }
 
         public void Phrases()
@@ -88,6 +93,13 @@ namespace MetalRay
 
             }
             save = Instantiate(randomPhrase, reference.transform);
+        }
+        void HighKillStreak()
+        {
+           if(highKillCounterValue < killCounterValue)
+           {
+            highKillCounterValue = killCounterValue;
+           }
         }
         
     }

@@ -17,7 +17,7 @@ namespace MetalRay
         public float distorcionTimer = 0;
         //  public GameObject muzzlePrefab;
         float fireTimer = 0;
-        public static float fireRate = 0.2f;
+        public static float fireRate = 0.1f;
 
         public GameObject muzzleVFX;
        

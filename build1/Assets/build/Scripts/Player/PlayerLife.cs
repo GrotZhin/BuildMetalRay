@@ -14,8 +14,8 @@ namespace MetalRay
     public class PlayerLife : MonoBehaviour
     {
         public static float life;
-       public float maxLife = 100;
-      
+        public float maxLife = 100;
+
         public int damage = 20;
 
         public UnityEngine.UI.Image fillBar;
@@ -24,27 +24,27 @@ namespace MetalRay
         public GameObject model;
         public GameObject hitSprite;
         public Transform respawn;
-       
+
         public GameObject deathEffect;
 
-         public ParticleSystem vfxdeath;
+        public ParticleSystem vfxdeath;
         float iframe = 0f;
         bool hitbool = false;
 
-        [SerializeField] private GameObject flashEffect ;
-        [SerializeField] private GameObject Sakihit ;
-        [SerializeField] private GameObject Sakideath ;
+        [SerializeField] private GameObject flashEffect;
+        [SerializeField] private GameObject Sakihit;
+        [SerializeField] private GameObject Sakideath;
         public float hitcamtimer;
         public float hitcamdur;
 
         bool flashonoff = true;
-        int flashstop ;
+        int flashstop;
 
         public TextMeshProUGUI textoVida;
 
         float killtimer = 0f;
         public static bool die;
-       public static bool ignore;
+        public static bool ignore;
 
         Scene scene;
 
@@ -60,29 +60,16 @@ namespace MetalRay
             life -= damage;
             ignore = true;
             Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
-            Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("enemyShoot"),true);
-            hitbool= true;
+            Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("enemyShoot"), true);
+            hitbool = true;
             FlashEffect();
-            
+
             soundManager.PlaySound(SoundType.PLAYERHIT);
-
             if (life <= 0)
-            {   
+            {
                 Die();
-                if (scene.name == ("level1"))
-                {
-                    Retry.i =1;
-                }else if(scene.name == ("level2"))
-                {
-                    Retry.i =2;
-                }
-                else if(scene.name == ("level3"))
-                {
-                    Retry.i =3;
-                }
-
-               
             }
+
 
         }
 
@@ -123,17 +110,18 @@ namespace MetalRay
             if (ignore == true)
             {
                 iframe += Time.deltaTime;
-                 if (iframe >= 1f)
-            {
-                Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
-                Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("enemyShoot"),false);   
-                iframe = 0;
-                ignore = false;
+                if (iframe >= 1f)
+                {
+                    Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
+                    Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("enemyShoot"), false);
+                    iframe = 0;
+                    ignore = false;
+                }
             }
-            }
-           
-           
-            
+
+
+
+
 
             if (fillBar.fillAmount <= 0.5)
             {
@@ -162,84 +150,93 @@ namespace MetalRay
 
         void Die()
         {
-            die = true;
+
             WinCondition.chances -= 1;
             halfBar.fillAmount = 0;
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(vfxdeath, transform.position, Quaternion.identity);
-            Sakideath.SetActive(true);
-            Respawn();
-            
+            if (WinCondition.chances > 0)
+            {
+                Respawn();
+            }
+            else if (WinCondition.chances <= 0)
+            {
+                die = true;
+                Sakideath.SetActive(true);
+            }
+
             Destroy(gameObject);
         }
         void Respawn()
         {
             Instantiate(this.gameObject, respawn.position, Quaternion.identity);
-            Sakideath.SetActive(false);
+            Score.killCounterValue = 0;
+
         }
         void FlashEffect()
         {
 
-           InvokeRepeating("Flash",0f,0.06f);
+            InvokeRepeating("Flash", 0f, 0.06f);
 
         }
-        void Flash(){
+        void Flash()
+        {
 
             if (flashonoff)
             {
-            flashEffect.SetActive(false);
-            flashonoff= false;
-            flashstop ++;
+                flashEffect.SetActive(false);
+                flashonoff = false;
+                flashstop++;
             }
-            else 
-            { 
-            flashEffect.SetActive(true);
-            flashonoff= true;
-            
+            else
+            {
+                flashEffect.SetActive(true);
+                flashonoff = true;
+
             }
             if (flashstop >= 6f)
             {
 
-            CancelInvoke("Flash");
-            flashEffect.SetActive(false);
-            flashstop = 0;
+                CancelInvoke("Flash");
+                flashEffect.SetActive(false);
+                flashstop = 0;
 
             }
-        
+
 
         }
-         void Hitcam()
+        void Hitcam()
         {
-          
 
-          hitcamtimer += Time.deltaTime;
 
-          if (hitcamtimer <= hitcamdur)
-          {
-            
-            Sakihit.SetActive(true);
+            hitcamtimer += Time.deltaTime;
 
-          }
-          
-          if (hitcamtimer >= hitcamdur)
-          {
-           
-            Sakihit.SetActive(false);
-            hitbool = false;
-            hitcamtimer = 0;
-          }
+            if (hitcamtimer <= hitcamdur)
+            {
 
-          
-          
+                Sakihit.SetActive(true);
+
+            }
+
+            if (hitcamtimer >= hitcamdur)
+            {
+
+                Sakihit.SetActive(false);
+                hitbool = false;
+                hitcamtimer = 0;
+            }
+
+
+
         }
 
     }
 
 }
-            
-        
-    
-        
 
-    
+
+
+
+
+
 

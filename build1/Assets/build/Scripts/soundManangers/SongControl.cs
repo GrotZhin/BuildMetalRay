@@ -17,12 +17,21 @@ namespace MetalRay
         void Start()
         {
             toggle = true;
+            for (int i = 0; i < songsLoop.Length; i++)
+            {
+                songsLoop[i].Play();
+            }
+            for (int i = 0; i < songsLoop.Length; i++)
+            {
+                songsLoop[i].Pause();
+            }
+            
         }
 
         // Update is called once per frame
         void Update()
         {
-          
+            time += Time.deltaTime;
             if (song.isPlaying == false && toggle == true)
             {
                 Loop();
@@ -34,9 +43,10 @@ namespace MetalRay
         {
             for (int i = 0; i < songsLoop.Length; i++)
             {
-                songsLoop[i].Play();
+                songsLoop[i].UnPause();
             }
         }
+        
         public void Stop()
         {
            

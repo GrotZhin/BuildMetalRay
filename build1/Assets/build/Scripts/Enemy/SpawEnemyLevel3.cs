@@ -28,18 +28,7 @@ namespace MetalRay
         {
             var random = enemyType[Random.Range(0, enemyType.Length)];
             var enemyTransform = Instantiate(random, spawn.transform);
-             //if (boss == true)
-          //  {   
-                
-//               bossInScreen = Instantiate(Boss, spawn.transform);
-                
-               // boss = false;
-                
-         //  }
-         
-          
-          // Debug.Log(bossInScreen);
-
+             
             if (WinCondition.i >=3)
             {
                 Destroy(this.gameObject);

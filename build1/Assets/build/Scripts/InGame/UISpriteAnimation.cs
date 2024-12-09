@@ -9,7 +9,7 @@ public class UISpriteAnimation : MonoBehaviour
     public Image m_Image;
 
     public Sprite[] m_SpriteArray;
-    public float m_Speed = .02f;
+    public float m_Speed;
 
     private int m_IndexSprite;
     Coroutine m_CorotineAnim;
@@ -36,6 +36,7 @@ public class UISpriteAnimation : MonoBehaviour
             m_IndexSprite = 0;
         }
         m_Image.sprite = m_SpriteArray[m_IndexSprite];
+    
         m_IndexSprite += 1;
         if (IsDone == false)
             m_CorotineAnim = StartCoroutine(Func_PlayAnimUI());

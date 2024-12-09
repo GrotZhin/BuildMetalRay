@@ -11,7 +11,7 @@ namespace MetalRay
         void Update()
         {
             if (ChorusPowerUp.active == true)
-                Debug.Log(ChorusPowerUp.active);
+                
             {
                 ChorusPowerUp.time += Time.deltaTime;
 
@@ -37,9 +37,9 @@ namespace MetalRay
 
                 if (DelayPowerUp.time >= 10f)
                 {
-                    Weapon.fireRate = 0.2f;
+                    Weapon.fireRate = 0.1f;
                     DelayPowerUp.active = false;
-                    Debug.Log(DelayPowerUp.active);
+                  
                     DelayPowerUp.time = 0;
                   
 
@@ -71,7 +71,7 @@ namespace MetalRay
             }
 
             if (ReverbPowerUp.active == true)
-                Debug.Log(ReverbPowerUp.active);
+               
             {
                 ReverbPowerUp.time += Time.deltaTime;
 
@@ -79,7 +79,7 @@ namespace MetalRay
                 {
                     enemyShoot.speed = 3;
                     ReverbPowerUp.active = false;
-                    Debug.Log(ReverbPowerUp.active);
+                   
                     ReverbPowerUp.time = 0;
                     
                 }

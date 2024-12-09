@@ -16,7 +16,7 @@ namespace MetalRay
         public float maxLife;
 
         public UnityEngine.UI.Image fillBar;
-        public UnityEngine.UI.Image halfBar;
+        public GameObject bossBar;
     
 
         public GameObject deathEffect;
@@ -57,6 +57,11 @@ namespace MetalRay
         }
         void Update()
         {
+            Vector2 pos = transform.position;
+            if (pos.y < 6 )
+            {
+              bossBar.SetActive(true);
+            }
 
          if (Input.GetKeyDown(KeyCode.K))
          {

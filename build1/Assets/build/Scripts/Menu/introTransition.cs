@@ -37,12 +37,12 @@ namespace MetalRay
            
             Destroy(gameObject);
             Destroy(canvas);
-            Debug.Log("sepafoi");
+           
 
         }
         void OnDestroy()
         {
-            Debug.Log("destruido");
+           
         }
         void Activateani()
         {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,6 +23,11 @@ namespace MetalRay
             if (timer >= dur)
             {
                 SceneManager.LoadScene("level1");
+            }
+
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                 SceneManager.LoadScene("level1");
             }
         
         }

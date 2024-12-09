@@ -12,7 +12,8 @@ namespace MetalRay
         [SerializeField] private GameObject mainMenu;
         [SerializeField] private GameObject optionMenu;
         [SerializeField] private GameObject gameMenu;
-
+        [SerializeField] private GameObject controlsmenu;
+    
         Scene scene;
 
         void Start()
@@ -73,8 +74,16 @@ namespace MetalRay
 
         public void Options()
         {
-            mainMenu.SetActive(false);
+            
             optionMenu.SetActive(true);
+             controlsmenu.SetActive(false);
+        }
+
+        public void controls()
+        {
+           
+            optionMenu.SetActive(false);
+            controlsmenu.SetActive(true);
         }
 
         public void Exit()
@@ -95,26 +104,37 @@ namespace MetalRay
                 WinCondition.i = 0;
                 SceneManager.LoadScene("level3");
             }
+            else if (scene.name == ("level3"))
+            {
+                WinCondition.i = 0;
+                SceneManager.LoadScene("Credits");
+            }
         }
         public void Back()
         {
             if (scene.name == ("MainMenu"))
             {
+                controlsmenu.SetActive(false);
                 mainMenu.SetActive(true);
                 optionMenu.SetActive(false);
+                
             }
             else if (scene.name == ("level1"))
             {
+                controlsmenu.SetActive(false);
                 optionMenu.SetActive(false);
                 gameMenu.SetActive(true);
+                
             }
             else if (scene.name == ("level2"))
             {
+                controlsmenu.SetActive(false);
                 optionMenu.SetActive(false);
                 gameMenu.SetActive(true);
             }
             else if (scene.name == ("level3"))
             {
+                controlsmenu.SetActive(false);
                 optionMenu.SetActive(false);
                 gameMenu.SetActive(true);
             }

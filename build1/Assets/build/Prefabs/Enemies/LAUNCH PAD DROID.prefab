@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b258a25f730a64d9d5471811ab1d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 200
+  life: 100
   deathEffect: {fileID: 3308732416233299549, guid: 8b4dfd9937c53e94eba7816ba355b53b, type: 3}
   vfxhit: {fileID: 5165246255472843786, guid: 80d56ecff5b950147b3c9615098b99f3, type: 3}
 --- !u!54 &3593543483128500890

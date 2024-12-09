@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d1773221333c440bd1159eddf0c91f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 4000
+  life: 20000
   deathEffect: {fileID: 3308732416233299549, guid: 8b4dfd9937c53e94eba7816ba355b53b, type: 3}
   vfxhit: {fileID: 5165246255472843786, guid: 80d56ecff5b950147b3c9615098b99f3, type: 3}
   model: {fileID: 0}
@@ -318,7 +318,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 0}
-  firePoint1: {fileID: 0}
   shootPrefab: {fileID: 0}
   fireTime: 0
   fireRate: 0
@@ -335,7 +334,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 0}
-  firePoint1: {fileID: 0}
   shootPrefab: {fileID: 0}
   fireTime: 0
   fireRate: 0

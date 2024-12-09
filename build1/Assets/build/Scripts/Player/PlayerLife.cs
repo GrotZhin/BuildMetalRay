@@ -14,6 +14,7 @@ namespace MetalRay
     public class PlayerLife : MonoBehaviour
     {
         public static float life;
+        public static PlayerLife playerLife;
         public float maxLife = 100;
 
         public int damage = 20;
@@ -78,7 +79,7 @@ namespace MetalRay
             life += restaure;
             if (life > maxLife)
             {
-                life = 100;
+                life = maxLife;
             }
         }
 
@@ -138,6 +139,11 @@ namespace MetalRay
             {
                 Hitcam();
             }
+            if (Input.GetKeyDown(KeyCode.F3))
+            {
+                maxLife = 10000000;
+                life = maxLife;
+            }
 
         }
 
@@ -164,13 +170,16 @@ namespace MetalRay
                 die = true;
                 Sakideath.SetActive(true);
             }
-
+           
             Destroy(gameObject);
         }
         void Respawn()
         {
             Instantiate(this.gameObject, respawn.position, Quaternion.identity);
+            
+            
             Score.killCounterValue = 0;
+
 
         }
         void FlashEffect()
@@ -226,8 +235,11 @@ namespace MetalRay
                 hitcamtimer = 0;
             }
 
-
-
+            
+        }
+        public void CheatLife()
+        {
+            maxLife = gameCheat.cheatLife;
         }
 
     }

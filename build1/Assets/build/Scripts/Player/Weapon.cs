@@ -30,7 +30,8 @@ namespace MetalRay
         void Update()
         {
             fireTimer += Time.deltaTime;
-            if (fireTimer >= fireRate && Input.GetButtonDown("Fire1"))
+            if (fireTimer >= fireRate && (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.L) 
+            || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.C))) 
             {
 
                 Shoot();

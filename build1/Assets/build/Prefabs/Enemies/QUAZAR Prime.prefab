@@ -479,12 +479,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ace774a4c84fd1429cdaee0617d1670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 10000
+  life: 40000
   maxLife: 10000
   fillBar: {fileID: 0}
-  halfBar: {fileID: 0}
+  bossBar: {fileID: 0}
   deathEffect: {fileID: 0}
-  vfxhit: {fileID: 0}
+  vfxdeath1: {fileID: 0}
+  vfxdeath2: {fileID: 0}
+  vfxdeath3: {fileID: 0}
   model: {fileID: 0}
   flashEffect: {fileID: 0}
 --- !u!114 &8855473840246437474
@@ -510,6 +512,7 @@ MonoBehaviour:
   - {fileID: 6065497752971872268}
   - {fileID: 0}
   animator: {fileID: 0}
+  flashanimator: {fileID: 0}
   shootPrefabs:
   - {fileID: 4096486653031533978, guid: fc242cdac63a0f145ab5851993432e7b, type: 3}
   - {fileID: 4096486653031533978, guid: 6d125043af9f2ef48bbd4accbaec1ad7, type: 3}

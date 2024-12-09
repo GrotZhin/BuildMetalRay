@@ -63,7 +63,7 @@ namespace MetalRay
               bossBar.SetActive(true);
             }
 
-         if (Input.GetKeyDown(KeyCode.K))
+         if (Input.GetKeyDown(KeyCode.F4))
          {
             life = 0;
          }

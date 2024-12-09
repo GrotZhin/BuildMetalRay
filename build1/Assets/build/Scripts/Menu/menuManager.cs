@@ -56,6 +56,7 @@ namespace MetalRay
             Score.killCounterValue = 0;
             PlayerLife.ignore = true;
             WinCondition.chances = 3;
+            WinCondition.i = 0;
         }
 
 
@@ -87,9 +88,11 @@ namespace MetalRay
             if (scene.name == ("level1"))
             {
                 SceneManager.LoadScene("level2");
+                WinCondition.i = 0;
             }
             else if (scene.name == ("level2"))
             {
+                WinCondition.i = 0;
                 SceneManager.LoadScene("level3");
             }
         }

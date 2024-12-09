@@ -45,7 +45,7 @@ public class BossMove : MonoBehaviour
 
             pos.y -= 2 * Time.deltaTime;
            
-            if (pos.y <= 5.20f && pos.y >= 5.15f)
+            if (pos.y <= 5.20f && pos.y >= 5.10f)
             {
                 down = false;
                 

@@ -35,7 +35,7 @@ namespace MetalRay
                 SceneManager.LoadScene("lose");
                 killtimer = 0f;
             }
-            if (scene.name == ("level1") && i == 1)
+            if (scene.name == ("level1") && i >= 1)
             {
                  Retry.i = 1;
 
@@ -48,24 +48,24 @@ namespace MetalRay
                  }
                  
             }
-             else if (scene.name == ("level2") && i == 2)
+             else if (scene.name == ("level2") && i >= 2)
             {
                  Retry.i = 2;
                  time += Time.deltaTime;
                  if (time >= 5f)
                  {
-                    SceneManager.LoadScene("win1");
+                    winScreen.SetActive(true);
                     time = 0;
                     i = 0;
                  }
             }
-            else if (scene.name == ("level3") && i ==3)
+            else if (scene.name == ("level3") && i >= 3)
             {
                 Retry.i = 3;
                 time += Time.deltaTime;
                 if(time >= 5f)
                 {
-                    SceneManager.LoadScene("win1");
+                    winScreen.SetActive(true);
                     time= 0;    
                     i = 0;
                 }

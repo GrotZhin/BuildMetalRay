@@ -9,15 +9,23 @@ namespace MetalRay
     {
         Scene scene;
         public static int i;
+        void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                RetryGame();
+            }
+        }
         public void RetryGame()
         {
             scene = SceneManager.GetActiveScene();
             Score.counter = 0;
             Score.scoreValue = 0;
             Score.killCounterValue = 0;
-            SceneManager.LoadScene("level1");
+            SceneManager.LoadScene(scene.name);
             PlayerLife.ignore = true;
             WinCondition.chances = 3;
+            WinCondition.i = 0;
 
 
 

@@ -16,7 +16,7 @@ namespace MetalRay
         public GameObject deathEffect;
 
         public ParticleSystem vfxhit;
-        int i = 0;
+    
         Scene scene;
        public GameObject model;
 

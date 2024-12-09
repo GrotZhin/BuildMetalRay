@@ -8,19 +8,25 @@ namespace MetalRay
     public class gameCheat : MonoBehaviour
     {
         Scene scene;
+        public static float cheatLife;
         void Start()
         {
-      
+            scene = SceneManager.GetActiveScene();
         }
-        public void Level1()
+        void Update()
         {
-            SceneManager.LoadScene("level1");
+            if (scene.name == ("level1") && Input.GetKeyUp(KeyCode.F2))
+            {
+                SceneManager.LoadScene("level2");
+            }
+            else if (scene.name == ("level2") && Input.GetKeyUp(KeyCode.F2))
+            {
+                SceneManager.LoadScene("level3");
+            }
+            
+            
         }
-        public void Level2()
-        {
-            SceneManager.LoadScene("level2");
-        }
-      
-        
+
+
     }
 }

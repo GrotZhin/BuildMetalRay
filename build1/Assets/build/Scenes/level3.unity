@@ -1467,6 +1467,7 @@ GameObject:
   - component: {fileID: 645918679}
   - component: {fileID: 645918681}
   - component: {fileID: 645918682}
+  - component: {fileID: 645918683}
   m_Layer: 0
   m_Name: menuManager
   m_TagString: Untagged
@@ -1528,7 +1529,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d09437f86c6414d87279d6060fcac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winScreen: {fileID: 0}
+  winScreen: {fileID: 1059084927}
+--- !u!114 &645918683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645918678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18db42fcb0cc06a4faa3d4e3df0a081b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &662341680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3019,6 +3032,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1059084927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3520526259223985061, guid: 17c6ed41e570da74290d9ca671e529b7, type: 3}
+  m_PrefabInstance: {fileID: 1427428871}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1079752924 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5712589368486231486, guid: 60994fcc40504f74b913b2a9966e77b1, type: 3}
@@ -4235,15 +4253,15 @@ PrefabInstance:
     - target: {fileID: 5991234309205894923, guid: 17c6ed41e570da74290d9ca671e529b7, type: 3}
       propertyPath: multiplier.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1567732313}
     - target: {fileID: 5991234309205894923, guid: 17c6ed41e570da74290d9ca671e529b7, type: 3}
       propertyPath: multiplier.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1397890217}
     - target: {fileID: 5991234309205894923, guid: 17c6ed41e570da74290d9ca671e529b7, type: 3}
       propertyPath: multiplier.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1493333512}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7660,15 +7678,27 @@ PrefabInstance:
     - target: {fileID: 2243615918258755180, guid: 4ff1cbe3c0d46674283f740aa8d42ed7, type: 3}
       propertyPath: multiplier.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1567732313}
     - target: {fileID: 2243615918258755180, guid: 4ff1cbe3c0d46674283f740aa8d42ed7, type: 3}
       propertyPath: multiplier.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1397890217}
     - target: {fileID: 2243615918258755180, guid: 4ff1cbe3c0d46674283f740aa8d42ed7, type: 3}
       propertyPath: multiplier.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1493333512}
+    - target: {fileID: 2243615918258755180, guid: 4ff1cbe3c0d46674283f740aa8d42ed7, type: 3}
+      propertyPath: multiplier.Array.data[3]
+      value: 
+      objectReference: {fileID: 1567732313}
+    - target: {fileID: 2243615918258755180, guid: 4ff1cbe3c0d46674283f740aa8d42ed7, type: 3}
+      propertyPath: multiplier.Array.data[4]
+      value: 
+      objectReference: {fileID: 1397890217}
+    - target: {fileID: 2243615918258755180, guid: 4ff1cbe3c0d46674283f740aa8d42ed7, type: 3}
+      propertyPath: multiplier.Array.data[5]
+      value: 
+      objectReference: {fileID: 1493333512}
     - target: {fileID: 2690020755379897982, guid: 4ff1cbe3c0d46674283f740aa8d42ed7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8015,6 +8045,10 @@ PrefabInstance:
       value: 0.91906357
       objectReference: {fileID: 0}
     - target: {fileID: 7090521213779717237, guid: f5627e16e5576b44aa764832f15f4840, type: 3}
+      propertyPath: life
+      value: 80000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090521213779717237, guid: f5627e16e5576b44aa764832f15f4840, type: 3}
       propertyPath: vfxhit
       value: 
       objectReference: {fileID: 0}
@@ -8026,6 +8060,10 @@ PrefabInstance:
       propertyPath: fillBar
       value: 
       objectReference: {fileID: 382172534}
+    - target: {fileID: 7090521213779717237, guid: f5627e16e5576b44aa764832f15f4840, type: 3}
+      propertyPath: maxLife
+      value: 80000
+      objectReference: {fileID: 0}
     - target: {fileID: 7090521213779717237, guid: f5627e16e5576b44aa764832f15f4840, type: 3}
       propertyPath: vfxdeath1
       value: 

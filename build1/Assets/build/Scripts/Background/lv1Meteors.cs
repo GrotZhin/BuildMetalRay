@@ -23,7 +23,7 @@ namespace MetalRay
             float randomX = Random.Range(-2,2);
             Vector3 randomspawn = new Vector3(randomX, reference.position.y, 2.5f);
             
-            Instantiate(randomMeteor, randomspawn, Quaternion.identity);
+            Instantiate(randomMeteor, randomspawn, transform.rotation);
             
         }
 

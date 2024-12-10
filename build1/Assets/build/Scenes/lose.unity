@@ -207,7 +207,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 668117352}
         m_TargetAssemblyTypeName: MetalRay.Retry, Assembly-CSharp
-        m_MethodName: RetryGame
+        m_MethodName: RetryButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

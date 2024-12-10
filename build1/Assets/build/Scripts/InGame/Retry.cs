@@ -16,6 +16,17 @@ namespace MetalRay
                 RetryGame();
             }
         }
+        public void RetryButton()
+        {
+            scene = SceneManager.GetActiveScene();
+            Score.counter = 0;
+            Score.scoreValue = 0;
+            Score.killCounterValue = 0;
+            SceneManager.LoadScene("level1");
+            PlayerLife.ignore = true;
+            WinCondition.chances = 3;
+            WinCondition.i = 0;
+        }
         public void RetryGame()
         {
             scene = SceneManager.GetActiveScene();

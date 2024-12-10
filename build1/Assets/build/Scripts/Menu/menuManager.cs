@@ -13,7 +13,7 @@ namespace MetalRay
         [SerializeField] private GameObject optionMenu;
         [SerializeField] private GameObject gameMenu;
         [SerializeField] private GameObject controlsmenu;
-    
+
         Scene scene;
 
         void Start()
@@ -38,12 +38,17 @@ namespace MetalRay
                 optionMenu.SetActive(false);
                 gameMenu.SetActive(true);
             }
+            else if (controlsmenu.activeSelf == true && (scene.name == ("level1") || scene.name == ("level2") || scene.name == ("level3")) && Input.GetKeyDown(KeyCode.Escape))
+            {
+                controlsmenu.SetActive(false);
+                gameMenu.SetActive(true);
+            }
+
             else if (gameMenu.activeSelf == true && (scene.name == ("level1") || scene.name == ("level2") || scene.name == ("level3")) && Input.GetKeyDown(KeyCode.Escape))
             {
                 Time.timeScale = 1;
                 gameMenu.SetActive(false);
             }
-
 
         }
 
@@ -74,21 +79,21 @@ namespace MetalRay
 
         public void Options()
         {
-            
+
             optionMenu.SetActive(true);
-             controlsmenu.SetActive(false);
+            controlsmenu.SetActive(false);
         }
 
         public void controls()
         {
-           
+
             optionMenu.SetActive(false);
             controlsmenu.SetActive(true);
         }
 
         public void Exit()
         {
-            
+
             Application.Quit();
         }
         public void NextLevel()
@@ -117,14 +122,14 @@ namespace MetalRay
                 controlsmenu.SetActive(false);
                 mainMenu.SetActive(true);
                 optionMenu.SetActive(false);
-                
+
             }
             else if (scene.name == ("level1"))
             {
                 controlsmenu.SetActive(false);
                 optionMenu.SetActive(false);
                 gameMenu.SetActive(true);
-                
+
             }
             else if (scene.name == ("level2"))
             {

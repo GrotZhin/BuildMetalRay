@@ -104,8 +104,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -248,6 +250,9 @@ ScriptsOnlyBuild:
     methodName: Back
   - assembly: Assembly-CSharp
     fullTypeName: MetalRay.menuManager
+    methodName: NextLevel
+  - assembly: Assembly-CSharp
+    fullTypeName: MetalRay.menuManager
     methodName: MainMenu
   - assembly: Assembly-CSharp
     fullTypeName: MetalRay.menuManager
@@ -258,9 +263,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MetalRay.menuManager
     methodName: Resume
-  - assembly: Assembly-CSharp
-    fullTypeName: MetalRay.menuManager
-    methodName: NextLevel
   - assembly: Assembly-CSharp
     fullTypeName: MetalRay.menuManager
     methodName: Back
@@ -275,6 +277,15 @@ ScriptsOnlyBuild:
     methodName: SetMusicVolume
   - assembly: Assembly-CSharp
     fullTypeName: MetalRay.menuManager
+    methodName: Back
+  - assembly: Assembly-CSharp
+    fullTypeName: MetalRay.menuManager
+    methodName: NextLevel
+  - assembly: Assembly-CSharp
+    fullTypeName: MetalRay.menuManager
+    methodName: Back
+  - assembly: Assembly-CSharp
+    fullTypeName: MetalRay.menuManager
     methodName: MainMenu
   - assembly: Assembly-CSharp
     fullTypeName: MetalRay.menuManager
@@ -285,15 +296,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MetalRay.menuManager
     methodName: Resume
-  - assembly: Assembly-CSharp
-    fullTypeName: MetalRay.menuManager
-    methodName: Back
-  - assembly: Assembly-CSharp
-    fullTypeName: MetalRay.menuManager
-    methodName: NextLevel
-  - assembly: Assembly-CSharp
-    fullTypeName: MetalRay.menuManager
-    methodName: Back
   - assembly: Assembly-CSharp
     fullTypeName: MetalRay.volumeSettings
     methodName: SetSfxVolume
@@ -812,7 +814,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1568}
+      Script: {instanceID: 1562}
     - Class: 114
       Script: {instanceID: 1570}
     - Class: 114
@@ -979,7 +981,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1568}
+      Script: {instanceID: 1562}
     - Class: 114
       Script: {instanceID: 1570}
     - Class: 114
@@ -1323,7 +1325,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 8634}
     - Class: 114
-      Script: {instanceID: 49346}
+      Script: {instanceID: 54156}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -1351,10 +1353,10 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 4974ee9fb028c3ee2d6ec4842c02f773
+      Hash: 1ca0292b0ebbb99515cea4020dfa7b8e
     assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: BossMove
+    namespaceName: MetalRay
+    className: PlayerLife
   - hash:
       serializedVersion: 2
       Hash: 117e8a10721bc04ab09a2cab8fd9aa9a
@@ -1369,10 +1371,10 @@ ScriptsOnlyBuild:
     className: SpawnEnemyLevel3
   - hash:
       serializedVersion: 2
-      Hash: e52fd0439b39b12816a5a68d10702d3d
+      Hash: 4974ee9fb028c3ee2d6ec4842c02f773
     assemblyName: Assembly-CSharp
-    namespaceName: MetalRay
-    className: DiscParts
+    namespaceName: 
+    className: BossMove
   - hash:
       serializedVersion: 2
       Hash: 9c22355f58e08e122002a3b4fdd2d241
@@ -1381,10 +1383,10 @@ ScriptsOnlyBuild:
     className: enemyShoot
   - hash:
       serializedVersion: 2
-      Hash: 1ca0292b0ebbb99515cea4020dfa7b8e
+      Hash: e52fd0439b39b12816a5a68d10702d3d
     assemblyName: Assembly-CSharp
     namespaceName: MetalRay
-    className: PlayerLife
+    className: DiscParts
   - hash:
       serializedVersion: 2
       Hash: d41ab9b5ea92474f9c0a6937a0607ce1
@@ -2968,4 +2970,4 @@ ScriptsOnlyBuild:
   - Assets/build/Scenes/lose.unity
   - Assets/build/Scenes/credits.unity
   - Assets/build/Scenes/GameCheat.unity
-  playerPath: C:/Users/bielc/OneDrive/Documentos/trabalhosFacul/TI/Finally/build1.exe
+  playerPath: C:/Users/aleat/OneDrive/Documentos/GitHub/BuildMetalRay/build1/metalRay/build1.exe
